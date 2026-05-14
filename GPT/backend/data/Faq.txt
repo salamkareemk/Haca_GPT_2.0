@@ -1,0 +1,466 @@
+# faq.md
+
+# HACA Frequently Asked Questions (FAQ)
+
+## General Questions
+
+### What is HACA?
+
+HACA (Haris & Co Academy) is an industry-focused learning ecosystem offering practical education in Marketing, Design, and Technology through real projects, mentorship, and internships.
+
+### Where is HACA located?
+
+HACA operates campuses in:
+
+* Kozhikode, Kerala, India
+* Dubai, UAE
+
+### Are courses available online?
+
+Yes. Most courses are available in:
+
+* Offline mode
+* Online live mode
+* Hybrid mode
+
+### Do I need prior experience?
+
+No. Most programs are beginner-friendly and start from fundamentals.
+
+### What is the teaching style?
+
+HACA follows:
+
+* 90% practical learning
+* 10% theory
+* Real-world project-based training
+
+### Is there placement support?
+
+Yes. HACA provides:
+
+* Resume building
+* Mock interviews
+* Portfolio guidance
+* Career mentoring
+* Placement assistance
+
+### Are internships included?
+
+Yes. Long-term flagship programs include internship opportunities with real projects.
+
+### Is EMI available?
+
+Yes. EMI is available for eligible long-duration courses.
+
+### Can college students join?
+
+Yes. College students can join online or weekend batches.
+
+### Can working professionals join?
+
+Yes. Evening and weekend online batches are designed for working professionals.
+
+---
+
+# Marketing School FAQs
+
+## Digital Marketing Program
+
+### What will I learn in Digital Marketing?
+
+You will learn:
+
+* SEO
+* Meta Ads
+* Google Ads
+* Content Marketing
+* Email Marketing
+* AI Marketing Tools
+* Social Media Strategy
+* Analytics
+
+### Is this course beginner-friendly?
+
+Yes. No prior marketing experience is required.
+
+### Will I work on real campaigns?
+
+Yes. Students work on live projects and real campaign simulations.
+
+### What jobs can I apply for after completion?
+
+You can apply for:
+
+* Digital Marketer
+* SEO Executive
+* Performance Marketer
+* Social Media Manager
+* Content Strategist
+
+### Is certification provided?
+
+Yes. Course completion certificates are provided.
+
+### Is laptop mandatory?
+
+Yes. A laptop is strongly recommended for practical sessions.
+
+### Do you teach AI tools in marketing?
+
+Yes. AI-integrated workflows and tools are included in flagship programs.
+
+### Are classes recorded?
+
+Online sessions may include recordings for revision purposes.
+
+### What is the average class duration?
+
+Usually 1.5–3 hours depending on the batch.
+
+### Is there attendance tracking?
+
+Yes. Attendance is monitored for certification eligibility.
+
+### Will I build a portfolio?
+
+Yes. Students build project portfolios during the program.
+
+### Do you provide freelance guidance?
+
+Yes. Basic freelancing guidance and client handling sessions are included.
+
+---
+
+# Design School FAQs
+
+## Graphic Design & UI/UX Programs
+
+### Which software will I learn?
+
+Depending on the course:
+
+* Photoshop
+* Illustrator
+* Figma
+* Canva
+* Premiere Pro
+* After Effects
+
+### Is drawing skill required for design?
+
+No. Creativity and consistency matter more than drawing skills.
+
+### Will I create real projects?
+
+Yes. Students work on branding, poster, UI, and motion projects.
+
+### What jobs can I get after Design School?
+
+Possible roles:
+
+* Graphic Designer
+* UI/UX Designer
+* Brand Designer
+* Motion Designer
+* Video Editor
+
+### Do I need a high-end laptop?
+
+Not necessarily, but a decent system is recommended for editing and motion design.
+
+### Is UI/UX coding included?
+
+Basic understanding may be introduced, but focus is mainly on design systems and user experience.
+
+### Will I learn branding?
+
+Yes. Branding and identity systems are major parts of the curriculum.
+
+### Is portfolio creation included?
+
+Yes. Portfolio building is one of the core focuses.
+
+### Are critique sessions conducted?
+
+Yes. Mentors review student work regularly.
+
+### Can beginners join UI/UX?
+
+Yes. The course starts from fundamentals.
+
+### Will I get internship opportunities?
+
+Selected students may receive internship opportunities.
+
+### Are design challenges included?
+
+Yes. Students participate in creative assignments and design tasks.
+
+---
+
+# Tech School FAQs
+
+## Python, AI & Data Science Programs
+
+### Which programming language is taught first?
+
+Python is usually the starting language for beginners.
+
+### Is coding experience required?
+
+No. Beginner-level support is provided.
+
+### What technologies are covered?
+
+Depending on the course:
+
+* Python
+* Django
+* AI Tools
+* APIs
+* Power BI
+* Machine Learning
+* Automation Tools
+* Databases
+
+### What is GenAI?
+
+GenAI refers to Generative AI tools like ChatGPT and AI-assisted workflows.
+
+### Will I build projects?
+
+Yes. Every course includes practical project development.
+
+### Are there coding assignments?
+
+Yes. Weekly practical tasks and mini-projects are included.
+
+### What jobs can I apply for?
+
+Possible roles:
+
+* Python Developer
+* Data Analyst
+* AI Automation Specialist
+* Backend Developer
+* Data Scientist
+
+### Do you teach deployment?
+
+Yes. Some advanced courses include deployment concepts.
+
+### Is Power BI included?
+
+Yes. Data Analytics programs include Power BI dashboards.
+
+### Are AI agents taught?
+
+Yes. Automation and AI agent concepts are introduced in selected programs.
+
+### What is cohort-based learning?
+
+Students learn in small mentor-led batches for better support.
+
+### Will I get project certificates?
+
+Yes. Certificates are provided after successful completion.
+
+### Do you provide interview preparation?
+
+Yes. Technical mock interviews and career preparation are included.
+
+### Can non-IT students join?
+
+Yes. Many students join from non-technical backgrounds.
+
+### Will I learn APIs and backend systems?
+
+Yes. Advanced backend and API development are included in developer programs.
+
+---
+
+# Admissions FAQs
+
+### How can I apply?
+
+You can:
+
+* Fill enquiry form
+* Contact admissions team
+* Book counselling call
+* Apply directly through website
+
+### Is there an entrance exam?
+
+No entrance exam is required for most programs.
+
+### What documents are required?
+
+Usually:
+
+* ID proof
+* Passport-size photo
+* Basic educational details
+
+### Can international students join?
+
+Yes. International learners can join online programs.
+
+### Are seats limited?
+
+Yes. Some batches follow limited cohort-based admissions.
+
+### Is there age restriction?
+
+No strict age restriction exists.
+
+### Can I switch batches later?
+
+Depending on availability, batch transfer may be possible.
+
+### Are weekend classes available?
+
+Yes. Selected online programs provide weekend options.
+
+---
+
+# Placement & Career FAQs
+
+### Is placement guaranteed?
+
+HACA provides strong placement assistance but job performance depends on student effort and skill level.
+
+### How does placement support work?
+
+Support includes:
+
+* Resume preparation
+* Portfolio review
+* Mock interviews
+* Career mentoring
+* Hiring connections
+
+### Do companies hire directly from HACA?
+
+Some hiring and referral opportunities may happen through partner networks.
+
+### Will I get LinkedIn optimization help?
+
+Yes. Personal branding guidance may be included.
+
+### Do you help with freelancing?
+
+Yes. Freelancing basics and client communication are discussed.
+
+### Will I receive internship certificates?
+
+Yes. Eligible internship participants receive certificates.
+
+### Can I start freelancing after the course?
+
+Yes. Many students begin freelancing during or after completion.
+
+---
+
+# Technical & Support FAQs
+
+### Which laptop is recommended?
+
+A laptop with:
+
+* Minimum 8GB RAM
+* SSD storage
+* Stable internet connection
+
+### Are recordings available forever?
+
+Recording access duration depends on course policy.
+
+### Is student support available after class?
+
+Yes. Students can communicate through mentor groups or support channels.
+
+### Are doubt-clearing sessions conducted?
+
+Yes. Regular doubt-solving sessions are available.
+
+### Do students receive study materials?
+
+Yes. Notes, resources, templates, and references are provided.
+
+### Is internet connection important?
+
+Yes. Stable internet is important for online classes.
+
+### Can classes be accessed on mobile?
+
+Possible, but laptops are recommended for practical work.
+
+### Is English fluency required?
+
+No. Basic communication is enough to start.
+
+### Are Malayalam explanations available?
+
+Some mentors may support bilingual explanations when needed.
+
+### Are certificates industry-recognized?
+
+Certificates reflect practical training and project completion experience.
+
+---
+
+# Payment & Refund FAQs
+
+### Can I pay in installments?
+
+Yes. Installment and EMI options are available.
+
+### What payment methods are accepted?
+
+* UPI
+* Bank transfer
+* Debit/Credit cards
+
+### Is registration fee refundable?
+
+Generally non-refundable once admission is confirmed.
+
+### What happens if I miss classes?
+
+Students may receive recordings or backup support depending on policy.
+
+### Can I pause my course?
+
+Special cases may be considered individually.
+
+### Are there hidden charges?
+
+No major hidden charges are intended beyond communicated fees.
+
+---
+
+# Contact FAQs
+
+### How can I contact HACA?
+
+* Phone: +91 08031332470
+* WhatsApp: +91 7736779775
+* Email: [info@harisandcoacademy.com](mailto:info@harisandcoacademy.com)
+
+### Is counselling free?
+
+Yes. Initial counselling sessions are free.
+
+### Can parents attend counselling?
+
+Yes. Parents are welcome during counselling sessions.
+
+### Do you provide campus visits?
+
+Yes. Students can visit campus before admission.
+
+### Are demo classes available?
+
+Selected programs may provide demo or orientation sessions.

@@ -1,0 +1,378 @@
+# testimonials.md
+
+# HACA Student Testimonials Dataset
+
+## Overview
+
+This dataset contains student feedback, placement experiences, internship stories, and learning outcomes from:
+
+* Marketing School
+* Design School
+* Tech School
+
+The testimonials are structured for:
+
+* RAG chatbot retrieval
+* Marketing use
+* Student success tracking
+* Placement showcases
+
+---
+
+# Marketing School Testimonials
+
+## Fathima Faathi — Digital Marketer
+
+| Attribute    | Details                         |
+| ------------ | ------------------------------- |
+| Course       | AI-integrated Digital Marketing |
+| Current Role | Digital Marketer                |
+| Background   | Beginner                        |
+| Mode         | Offline                         |
+
+> “The digital marketing classes were practical, easy to understand, and updated with real industry strategies. Mentors supported me throughout the journey.”
+
+### Key Outcomes
+
+* Learned Meta Ads & SEO
+* Built campaign portfolio
+* Improved interview confidence
+* Started career in marketing
+
+---
+
+## Nihal Basheer — SEO Executive
+
+| Attribute    | Details                 |
+| ------------ | ----------------------- |
+| Course       | SEO & Blogging Strategy |
+| Current Role | SEO Executive           |
+| Background   | Commerce Student        |
+| Mode         | Online                  |
+
+> “I joined with zero knowledge about SEO. The practical assignments helped me understand how real websites rank and grow.”
+
+### Key Outcomes
+
+* Learned keyword research
+* Built SEO case studies
+* Freelancing started during course
+
+---
+
+## Ayisha Noor — Social Media Manager
+
+| Attribute    | Details                                 |
+| ------------ | --------------------------------------- |
+| Course       | Content Creation & Social Media Mastery |
+| Current Role | Social Media Manager                    |
+| Background   | Content Creator                         |
+| Mode         | Online                                  |
+
+> “The mentors helped me improve content strategy and personal branding. I now manage pages for businesses confidently.”
+
+### Key Outcomes
+
+* Improved content planning
+* Learned audience engagement
+* Started managing client pages
+
+---
+
+## Adil Hussain — Performance Marketer
+
+| Attribute    | Details                       |
+| ------------ | ----------------------------- |
+| Course       | Performance Marketing Mastery |
+| Current Role | Meta Ads Specialist           |
+| Background   | Working Professional          |
+| Mode         | Online                        |
+
+> “The ad campaign sessions and live practicals gave me confidence to handle client ads professionally.”
+
+### Key Outcomes
+
+* Learned ad optimization
+* Improved ROI strategies
+* Started freelance marketing services
+
+---
+
+# Design School Testimonials
+
+## CK Ajmal Ali — Graphic Designer
+
+| Attribute    | Details                         |
+| ------------ | ------------------------------- |
+| Course       | Creative Design & Communication |
+| Current Role | Graphic Designer                |
+| Background   | Beginner                        |
+| Mode         | Offline                         |
+
+> “The hands-on projects completely changed the way I think as a designer. The portfolio sessions were incredibly valuable.”
+
+### Key Outcomes
+
+* Built Behance portfolio
+* Improved branding skills
+* Got placed in design studio
+
+---
+
+## Hana Mariyam — Video Editor
+
+| Attribute    | Details                             |
+| ------------ | ----------------------------------- |
+| Course       | AI Integrated Video Editing Mastery |
+| Current Role | Video Editor                        |
+| Background   | College Student                     |
+| Mode         | Online                              |
+
+> “The editing workflow and storytelling sessions helped me create professional-quality content.”
+
+### Key Outcomes
+
+* Learned cinematic editing
+* Improved motion design
+* Started freelance editing
+
+---
+
+## Fida Shirin — UI/UX Designer
+
+| Attribute    | Details                   |
+| ------------ | ------------------------- |
+| Course       | UI/UX Design + AI Program |
+| Current Role | UI/UX Designer            |
+| Background   | Non-technical             |
+| Mode         | Online                    |
+
+> “I was afraid to enter tech-related design, but the mentors made UI/UX simple and practical.”
+
+### Key Outcomes
+
+* Created Figma case studies
+* Learned design systems
+* Transitioned into tech design
+
+---
+
+## Amal Krishna — Motion Designer
+
+| Attribute    | Details                            |
+| ------------ | ---------------------------------- |
+| Course       | Motion Graphics Professional Track |
+| Current Role | Motion Designer                    |
+| Background   | Freelancer                         |
+| Mode         | Offline                            |
+
+> “The practical animation tasks improved my creativity and confidence as a motion designer.”
+
+### Key Outcomes
+
+* Improved animation workflow
+* Learned storytelling techniques
+* Expanded freelance client work
+
+---
+
+# Tech School Testimonials
+
+## Arun Krishnan — Full Stack Developer
+
+| Attribute    | Details                           |
+| ------------ | --------------------------------- |
+| Course       | Advanced Python Django with GenAI |
+| Current Role | Full Stack Developer              |
+| Background   | Non-IT Student                    |
+| Mode         | Offline                           |
+
+> “I started with zero coding knowledge. The mentors guided me step by step until I built real projects confidently.”
+
+### Key Outcomes
+
+* Learned backend development
+* Built Django projects
+* Got placed as developer
+
+---
+
+## Meera Nair — Data Analyst
+
+| Attribute    | Details                         |
+| ------------ | ------------------------------- |
+| Course       | Advanced Data Analytics with AI |
+| Current Role | Data Analyst                    |
+| Background   | Commerce Graduate               |
+| Mode         | Hybrid                          |
+
+> “The dashboard projects and analytics training gave me practical exposure that helped during interviews.”
+
+### Key Outcomes
+
+* Learned Power BI
+* Built analytics dashboards
+* Improved presentation skills
+
+---
+
+## Sreerag P — AI Automation Engineer
+
+| Attribute    | Details                       |
+| ------------ | ----------------------------- |
+| Course       | AI Agent Development Bootcamp |
+| Current Role | AI Automation Engineer        |
+| Background   | Python Learner                |
+| Mode         | Online                        |
+
+> “The AI automation sessions completely changed how I see technology. Building AI agents was exciting and practical.”
+
+### Key Outcomes
+
+* Built AI workflows
+* Learned automation systems
+* Started AI freelance projects
+
+---
+
+## Jasim K — Backend Developer
+
+| Attribute    | Details                     |
+| ------------ | --------------------------- |
+| Course       | Full Stack MERN Development |
+| Current Role | Backend Developer           |
+| Background   | Self Learner                |
+| Mode         | Offline                     |
+
+> “The mentor support and practical projects helped me understand real-world backend development.”
+
+### Key Outcomes
+
+* Learned APIs & databases
+* Improved coding confidence
+* Built portfolio projects
+
+---
+
+## Riyas Mohammed — Python Developer
+
+| Attribute    | Details                 |
+| ------------ | ----------------------- |
+| Course       | Python for Beginners    |
+| Current Role | Junior Python Developer |
+| Background   | Beginner                |
+| Mode         | Online                  |
+
+> “The classes were beginner-friendly and practical. Every concept was explained clearly with examples.”
+
+### Key Outcomes
+
+* Learned Python fundamentals
+* Built mini projects
+* Started internship training
+
+---
+
+# Parent Testimonials
+
+## Parent Feedback — Marketing Student
+
+> “We noticed a huge improvement in communication skills and confidence after joining HACA.”
+
+---
+
+## Parent Feedback — Design Student
+
+> “The mentors genuinely support students instead of just completing classes.”
+
+---
+
+## Parent Feedback — Tech Student
+
+> “The practical approach helped my child become more career-focused and disciplined.”
+
+---
+
+# Internship Testimonials
+
+## Internship Experience — Design School
+
+> “Working on real projects during internship gave me confidence before attending interviews.”
+
+---
+
+## Internship Experience — Marketing School
+
+> “The internship exposed me to real client communication and campaign management.”
+
+---
+
+## Internship Experience — Tech School
+
+> “Building live applications during internship improved my understanding of development workflows.”
+
+---
+
+# Common Success Outcomes
+
+## Students Commonly Achieved
+
+* Career switching
+* Freelancing opportunities
+* Portfolio development
+* Improved communication
+* Industry exposure
+* Placement readiness
+* Confidence improvement
+* Real-world project experience
+
+---
+
+# Commonly Mentioned Strengths
+
+| Strength              | Mentions  |
+| --------------------- | --------- |
+| Practical Learning    | Very High |
+| Mentor Support        | Very High |
+| Portfolio Building    | High      |
+| Placement Support     | High      |
+| Real Projects         | High      |
+| Internship Experience | Medium    |
+| Community Support     | Medium    |
+
+---
+
+# Video Testimonial Dataset
+
+| Student        | Topic                           |
+| -------------- | ------------------------------- |
+| Arun Krishnan  | From Beginner to Developer      |
+| Fathima Faathi | Marketing Career Journey        |
+| CK Ajmal Ali   | Design Portfolio Transformation |
+| Meera Nair     | Analytics Learning Experience   |
+| Sreerag P      | AI Automation Projects          |
+
+---
+
+# Social Proof Metrics
+
+| Metric                    | Value  |
+| ------------------------- | ------ |
+| Positive Student Reviews  | 95%+   |
+| Placement Satisfaction    | High   |
+| Mentor Support Rating     | 4.8/5  |
+| Practical Learning Rating | 4.9/5  |
+| Community Engagement      | Strong |
+
+---
+
+# Dataset Notes
+
+* Structured for RAG chatbot retrieval
+* Optimized for semantic search
+* Expandable into:
+
+  * testimonials.json
+  * student_reviews.csv
+  * success_stories.json
+  * placement_feedback.json

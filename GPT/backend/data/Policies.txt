@@ -1,0 +1,578 @@
+# policies.md
+
+# HACA Policies & Guidelines Dataset
+
+## Overview
+
+This document contains the institutional policies, student guidelines, payment rules, academic policies, and operational standards followed across:
+
+* Marketing School
+* Design School
+* Tech School
+
+The policies are structured for:
+
+* Student awareness
+* Administrative clarity
+* RAG chatbot retrieval
+* Future automation systems
+
+---
+
+# Admission Policy
+
+## Eligibility Criteria
+
+### General Eligibility
+
+* Open to students from all educational backgrounds
+* No prior experience required for beginner-level programs
+* Working professionals may also apply
+* International students can join online programs
+
+---
+
+## Admission Process
+
+### Step-by-Step Admission Flow
+
+1. Submit enquiry form
+2. Attend counselling session
+3. Choose course & batch
+4. Complete registration
+5. Confirm payment
+6. Receive onboarding details
+
+---
+
+## Required Documents
+
+Students may need:
+
+* Government ID proof
+* Passport-size photograph
+* Educational qualification details
+* Contact information
+
+---
+
+## Seat Allocation Policy
+
+* Admissions are processed on first-come-first-served basis
+* Limited seats available in cohort-based batches
+* Seat confirmation only after registration payment
+
+---
+
+# Academic Policy
+
+## Learning Structure
+
+HACA follows:
+
+* 90% practical learning
+* 10% theory
+* Real project-based training
+* Mentor-led sessions
+
+---
+
+## Class Modes
+
+Available learning modes:
+
+* Offline
+* Online live
+* Hybrid
+
+---
+
+## Attendance Policy
+
+### Minimum Attendance Requirement
+
+* Students should maintain at least 75% attendance
+* Low attendance may affect:
+
+  * Certification eligibility
+  * Internship opportunities
+  * Placement support
+
+---
+
+## Assignment Policy
+
+Students are expected to:
+
+* Submit assignments before deadlines
+* Participate in practical tasks
+* Complete project milestones
+
+Late submissions may affect performance evaluations.
+
+---
+
+## Project Policy
+
+### Mandatory Project Work
+
+Most long-term programs include:
+
+* Individual projects
+* Group projects
+* Case studies
+* Real-world practical tasks
+
+---
+
+## Internship Policy
+
+### Internship Eligibility
+
+Students become eligible after:
+
+* Completing major modules
+* Maintaining attendance
+* Submitting required assignments
+
+### Internship Duration
+
+Usually:
+
+* 1 Month
+* Project-based internship
+* Agency/live client internship
+
+---
+
+# Examination & Evaluation Policy
+
+## Evaluation Criteria
+
+Students may be evaluated through:
+
+* Assignments
+* Practical tasks
+* Projects
+* Presentations
+* Mock interviews
+
+---
+
+## Certification Eligibility
+
+Students receive certificates upon:
+
+* Completing course modules
+* Maintaining attendance
+* Submitting required projects
+
+---
+
+## Performance Tracking
+
+Tracked metrics may include:
+
+* Assignment scores
+* Attendance percentage
+* Project completion
+* Participation levels
+
+---
+
+# Placement Policy
+
+## Placement Support
+
+HACA provides:
+
+* Resume building
+* Portfolio review
+* Mock interviews
+* LinkedIn optimization
+* Career mentoring
+
+---
+
+## Placement Eligibility
+
+Students become eligible for placement support after:
+
+* Completing assignments
+* Building portfolio
+* Clearing mock interviews
+* Maintaining attendance requirements
+
+---
+
+## Placement Disclaimer
+
+* Placement support is provided to eligible students
+* Final job selection depends on:
+
+  * Skill level
+  * Communication
+  * Interview performance
+  * Market opportunities
+
+---
+
+# Payment Policy
+
+## Accepted Payment Methods
+
+Students can pay through:
+
+* UPI
+* Bank transfer
+* Debit/Credit cards
+* EMI financing
+
+---
+
+## EMI Policy
+
+### EMI Eligibility
+
+Available for selected long-term programs.
+
+### EMI Terms
+
+* Minimum down payment required
+* Monthly installment structure available
+* Delayed EMI payments may affect batch access
+
+---
+
+## Registration Fee Policy
+
+* Registration fee secures seat allocation
+* Registration fee is generally non-refundable
+
+---
+
+## Fee Due Policy
+
+Students should:
+
+* Complete fee payments before deadlines
+* Inform administration about payment delays in advance
+
+---
+
+# Refund Policy
+
+## Refund Conditions
+
+| Situation           | Refund Status            |
+| ------------------- | ------------------------ |
+| Before course start | Partial refund possible  |
+| Within first 7 days | Limited refund possible  |
+| After 7 days        | Generally non-refundable |
+
+---
+
+## Refund Processing Time
+
+Refund processing may take:
+
+* 7–21 working days
+
+---
+
+## Non-Refundable Situations
+
+Refund may not apply if:
+
+* Student voluntarily discontinues
+* Course access already provided
+* Recorded materials downloaded
+
+---
+
+# Online Learning Policy
+
+## Technical Requirements
+
+Students should have:
+
+* Stable internet connection
+* Laptop/Desktop preferred
+* Required software installed
+
+---
+
+## Online Classroom Rules
+
+Students should:
+
+* Join classes on time
+* Maintain respectful communication
+* Avoid disruptions during sessions
+
+---
+
+## Recording Policy
+
+Some online sessions may be recorded for:
+
+* Revision purposes
+* Internal academic use
+
+Unauthorized redistribution is prohibited.
+
+---
+
+# Code of Conduct
+
+## Student Behavior Expectations
+
+Students are expected to:
+
+* Respect mentors and peers
+* Maintain professional communication
+* Avoid harassment or discrimination
+
+---
+
+## Misconduct Policy
+
+Misconduct may result in:
+
+* Warning
+* Temporary suspension
+* Removal from program
+
+Examples include:
+
+* Harassment
+* Abuse
+* Academic dishonesty
+* Plagiarism
+
+---
+
+# Intellectual Property Policy
+
+## Student Projects
+
+Students retain ownership of personal portfolio work unless:
+
+* Developed under client agreements
+* Covered by internship contracts
+
+---
+
+## Learning Materials
+
+Course materials provided by HACA:
+
+* Should not be redistributed publicly
+* Cannot be resold without permission
+
+---
+
+# Community Policy
+
+## Community Participation
+
+Students are encouraged to:
+
+* Participate in discussions
+* Support peers
+* Share constructive feedback
+
+---
+
+## Community Guidelines
+
+Not allowed:
+
+* Hate speech
+* Spam
+* Promotional abuse
+* Toxic behavior
+
+---
+
+# Data & Privacy Policy
+
+## Student Data Usage
+
+Student information may be used for:
+
+* Academic communication
+* Placement coordination
+* Internal analytics
+
+---
+
+## Data Protection
+
+HACA aims to:
+
+* Protect student information
+* Avoid unauthorized data sharing
+
+---
+
+## Communication Consent
+
+Students may receive:
+
+* Batch updates
+* Placement updates
+* Academic notifications
+* Event announcements
+
+---
+
+# Support Policy
+
+## Student Support Channels
+
+Support may include:
+
+* WhatsApp groups
+* Mentor sessions
+* Admin assistance
+* Technical support
+
+---
+
+## Response Time
+
+Average support response:
+
+* 24–48 working hours
+
+---
+
+# Batch Transfer Policy
+
+## Batch Change Conditions
+
+Students may request transfer based on:
+
+* Seat availability
+* Timing conflicts
+* Administrative approval
+
+---
+
+# Leave & Pause Policy
+
+## Course Pause Requests
+
+Special cases may be considered for:
+
+* Medical reasons
+* Emergency situations
+* Academic conflicts
+
+Approval depends on administration review.
+
+---
+
+# Certification Policy
+
+## Certificate Issuance
+
+Certificates are issued after:
+
+* Course completion
+* Assignment submission
+* Attendance verification
+
+---
+
+## Digital Certificates
+
+Certificates may be provided:
+
+* Digitally
+* Physically (selected programs)
+
+---
+
+# Media & Promotion Policy
+
+## Student Work Showcase
+
+Student projects may be featured:
+
+* Social media
+* Portfolio showcases
+* Promotional materials
+
+Students may request exclusions if needed.
+
+---
+
+# AI Usage Policy
+
+## Responsible AI Usage
+
+Students are encouraged to:
+
+* Use AI ethically
+* Avoid plagiarism
+* Understand generated outputs
+
+---
+
+## Restricted Usage
+
+Not allowed:
+
+* Malicious AI usage
+* Harmful automation
+* Unauthorized data scraping
+
+---
+
+# Safety Policy
+
+## Campus Safety
+
+Students should:
+
+* Follow campus guidelines
+* Maintain discipline
+* Respect shared spaces
+
+---
+
+# Policy Updates
+
+## Modification Rights
+
+HACA reserves the right to:
+
+* Update policies
+* Modify schedules
+* Revise curriculum
+* Change operational guidelines
+
+---
+
+# Contact Information
+
+| Department       | Contact                                                         |
+| ---------------- | --------------------------------------------------------------- |
+| Admissions       | +91 08031332470                                                 |
+| WhatsApp Support | +91 7736779775                                                  |
+| Email            | [info@harisandcoacademy.com](mailto:info@harisandcoacademy.com) |
+
+---
+
+# Dataset Notes
+
+* Structured for RAG chatbot systems
+* Optimized for semantic retrieval
+* Expandable into:
+
+  * policies.json
+  * policy_chunks.json
+  * compliance_data.json
+  * student_guidelines.json

@@ -1,0 +1,348 @@
+# placement.md
+
+# HACA Placement & Career Support Dataset
+
+## Overview
+
+HACA provides industry-focused placement support across:
+
+* Marketing School
+* Design School
+* Tech School
+
+The placement ecosystem focuses on:
+
+* Real project experience
+* Portfolio development
+* Internship exposure
+* Career mentoring
+* Mock interviews
+* Industry networking
+
+---
+
+# Placement Statistics
+
+| Metric                       | Value   |
+| ---------------------------- | ------- |
+| Total Students Trained       | 2000+   |
+| Students Placed              | 1200+   |
+| Placement Support Rate       | 100%    |
+| Hiring Partner Companies     | 250+    |
+| Internship Opportunities     | 500+    |
+| Portfolio Projects Completed | 3000+   |
+| Career Mentors               | 30+     |
+| Average Internship Duration  | 1 Month |
+
+---
+
+# Placement Process
+
+## Step 1 — Skill Development
+
+Students first complete:
+
+* Practical learning
+* Assignments
+* Real-world projects
+* Mini tasks
+* Team collaborations
+
+---
+
+## Step 2 — Portfolio Building
+
+Students prepare:
+
+* Resume
+* LinkedIn profile
+* GitHub profile
+* Behance portfolio
+* Case studies
+
+---
+
+## Step 3 — Mock Interviews
+
+Training includes:
+
+* HR interview practice
+* Technical interview practice
+* Communication improvement
+* Confidence building
+
+---
+
+## Step 4 — Internship Support
+
+Students may receive:
+
+* Internal internships
+* Agency projects
+* Startup collaborations
+* Freelance opportunities
+
+---
+
+## Step 5 — Placement Assistance
+
+Support includes:
+
+* Referral opportunities
+* Hiring connections
+* Interview scheduling
+* Placement preparation
+* Career tracking
+
+---
+
+# Marketing School Placements
+
+## Placement Roles
+
+| Role                 | Average Fresher Salary  |
+| -------------------- | ----------------------- |
+| Digital Marketer     | ₹18,000 – ₹35,000/month |
+| SEO Executive        | ₹15,000 – ₹30,000/month |
+| Performance Marketer | ₹25,000 – ₹45,000/month |
+| Social Media Manager | ₹20,000 – ₹40,000/month |
+| Content Strategist   | ₹18,000 – ₹35,000/month |
+
+---
+
+## Sample Student Placements
+
+| Student Name   | Role                 | Company Type     | Salary        |
+| -------------- | -------------------- | ---------------- | ------------- |
+| Fathima Faathi | Digital Marketer     | Marketing Agency | ₹28,000/month |
+| Nihal Basheer  | SEO Executive        | Startup          | ₹22,000/month |
+| Ameen Rasheed  | Meta Ads Specialist  | E-commerce Brand | ₹35,000/month |
+| Ayisha Noor    | Social Media Manager | Creative Agency  | ₹30,000/month |
+| Adil Hussain   | Content Strategist   | Media Company    | ₹27,000/month |
+
+---
+
+# Design School Placements
+
+## Placement Roles
+
+| Role             | Average Fresher Salary  |
+| ---------------- | ----------------------- |
+| Graphic Designer | ₹18,000 – ₹35,000/month |
+| UI/UX Designer   | ₹25,000 – ₹50,000/month |
+| Motion Designer  | ₹20,000 – ₹40,000/month |
+| Video Editor     | ₹18,000 – ₹35,000/month |
+| Brand Designer   | ₹22,000 – ₹45,000/month |
+
+---
+
+## Sample Student Placements
+
+| Student Name | Role             | Company Type    | Salary        |
+| ------------ | ---------------- | --------------- | ------------- |
+| CK Ajmal Ali | Graphic Designer | Branding Studio | ₹30,000/month |
+| Fida Shirin  | UI/UX Designer   | SaaS Startup    | ₹42,000/month |
+| Amal Krishna | Motion Designer  | Media Agency    | ₹32,000/month |
+| Hana Mariyam | Video Editor     | Content Studio  | ₹26,000/month |
+| Riyas Ahmed  | Brand Designer   | Design Agency   | ₹38,000/month |
+
+---
+
+# Tech School Placements
+
+## Placement Roles
+
+| Role                   | Average Fresher Salary  |
+| ---------------------- | ----------------------- |
+| Python Developer       | ₹25,000 – ₹50,000/month |
+| Backend Developer      | ₹30,000 – ₹60,000/month |
+| Full Stack Developer   | ₹35,000 – ₹70,000/month |
+| Data Analyst           | ₹28,000 – ₹55,000/month |
+| AI Automation Engineer | ₹40,000 – ₹80,000/month |
+
+---
+
+## Sample Student Placements
+
+| Student Name   | Role                   | Company Type      | Salary        |
+| -------------- | ---------------------- | ----------------- | ------------- |
+| Arun Krishnan  | Full Stack Developer   | Software Company  | ₹55,000/month |
+| Jasim K        | Python Developer       | SaaS Startup      | ₹42,000/month |
+| Meera Nair     | Data Analyst           | Analytics Company | ₹48,000/month |
+| Sreerag P      | AI Automation Engineer | AI Startup        | ₹65,000/month |
+| Niyas Mohammed | Backend Developer      | Product Company   | ₹52,000/month |
+
+---
+
+# Internship Programs
+
+## Internship Types
+
+| Internship Type              | Duration   | Domain                  |
+| ---------------------------- | ---------- | ----------------------- |
+| Digital Marketing Internship | 1 Month    | Marketing               |
+| Branding Internship          | 1 Month    | Design                  |
+| UI/UX Internship             | 1 Month    | Product Design          |
+| Full Stack Internship        | 1–2 Months | Development             |
+| AI & Automation Internship   | 1 Month    | Artificial Intelligence |
+
+---
+
+# Hiring Partner Categories
+
+## Companies Include
+
+* Marketing Agencies
+* SaaS Startups
+* Product Companies
+* E-commerce Brands
+* Creative Studios
+* AI Startups
+* Software Companies
+* Freelance Networks
+
+---
+
+# Placement Training Modules
+
+## Career Preparation Includes
+
+* Resume building
+* GitHub optimization
+* LinkedIn optimization
+* Portfolio reviews
+* Mock interviews
+* Communication training
+* Personal branding
+
+---
+
+# Freelancing Support
+
+## Students Learn
+
+* Client communication
+* Proposal writing
+* Fiverr basics
+* Upwork basics
+* Personal branding
+* Pricing strategies
+
+---
+
+# Placement Success Stories
+
+## Fathima Faathi — Digital Marketing
+
+> “The practical campaigns and mentorship helped me confidently attend interviews and start my marketing career.”
+
+---
+
+## CK Ajmal Ali — Graphic Designer
+
+> “The portfolio-building sessions completely changed my confidence level as a designer.”
+
+---
+
+## Arun Krishnan — Full Stack Developer
+
+> “I started with zero coding knowledge and got placed as a developer after completing the program.”
+
+---
+
+## Meera Nair — Data Analyst
+
+> “The analytics projects and dashboard training gave me practical industry exposure.”
+
+---
+
+## Sreerag P — AI Automation Engineer
+
+> “Learning AI automation and workflows helped me enter the AI startup ecosystem quickly.”
+
+---
+
+# Placement Support Policies
+
+## Eligibility
+
+Students become eligible for placement assistance after:
+
+* Completing projects
+* Maintaining attendance
+* Submitting assignments
+* Completing portfolio requirements
+
+---
+
+## Interview Readiness Criteria
+
+Students should have:
+
+* Resume completed
+* Portfolio prepared
+* Mock interviews attended
+* Communication assessment cleared
+
+---
+
+# Placement FAQs
+
+### Is placement guaranteed?
+
+HACA provides strong placement support and hiring assistance, but final selection depends on student performance.
+
+### Are internships paid?
+
+Some internships may be paid depending on the company and role.
+
+### Can students freelance after course completion?
+
+Yes. Students are encouraged to build freelance profiles and personal brands.
+
+### Is remote placement possible?
+
+Yes. Remote job opportunities may be available.
+
+### Do students receive certificates?
+
+Yes. Students receive course completion certificates and project experience documentation.
+
+---
+
+# Placement Team Dataset
+
+| Team Member          | Role                                |
+| -------------------- | ----------------------------------- |
+| Rizwan Ramzan Ahamed | Career Ecosystem Lead               |
+| Anjana S             | HR & Interview Trainer              |
+| Haris Aboobacker     | Industry Partnership Lead           |
+| Mohammed Nazil K     | Technical Placement Mentor          |
+| Jawadha              | LinkedIn & Personal Branding Mentor |
+
+---
+
+# Placement Metrics Tracking
+
+## Tracked Parameters
+
+* Placement status
+* Internship completion
+* Salary package
+* Interview attendance
+* Portfolio completion
+* LinkedIn optimization
+* Freelance profile setup
+
+---
+
+# Dataset Notes
+
+* Optimized for RAG chatbot retrieval
+* Structured for future vector embedding
+* Expandable into:
+
+  * placements.json
+  * placement_stats.csv
+  * internships.json
+  * student_outcomes.json

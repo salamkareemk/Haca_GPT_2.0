@@ -1,0 +1,111 @@
+# HACA Fee Structure Dataset
+
+## Overview
+HACA provides flexible payment structures for all schools under its ecosystem, including Marketing School, Design School, and Tech School. Fee payments can be completed through full payment, EMI, or installment-based methods.
+
+> Note: The following fees are structured dummy/sample data for chatbot and RAG dataset preparation purposes.
+
+---
+
+# Marketing School Fees
+
+| Course Name | Mode | Duration | Total Fee | Registration Fee | EMI Available | Monthly EMI |
+|---|---|---|---|---|---|---|
+| AI-integrated Digital Marketing | Offline | 5+1 Months | ₹85,000 | ₹5,000 | Yes | ₹14,000 |
+| AI-integrated Digital Marketing | Online | 5 Months | ₹65,000 | ₹5,000 | Yes | ₹11,000 |
+| Performance Marketing Mastery | Online | 2 Months | ₹25,000 | ₹3,000 | Yes | ₹11,500 |
+| Content Creation & Social Media Mastery | Online | 6 Weeks | ₹18,000 | ₹2,000 | No | — |
+
+---
+
+# Design School Fees
+
+| Course Name | Mode | Duration | Total Fee | Registration Fee | EMI Available | Monthly EMI |
+|---|---|---|---|---|---|---|
+| Creative Design & Communication | Offline | 6 Months | ₹95,000 | ₹5,000 | Yes | ₹15,500 |
+| AI Integrated Graphic Design | Online | 3 Months | ₹38,000 | ₹3,000 | Yes | ₹12,000 |
+| Branding & Identity Design Mastery | Online | 4 Weeks | ₹15,000 | ₹2,000 | No | — |
+| UI/UX Design + AI Program | Online | 3 Months | ₹48,000 | ₹3,000 | Yes | ₹15,000 |
+| AI Integrated Video Editing Mastery | Online | 3 Months | ₹42,000 | ₹3,000 | Yes | ₹13,500 |
+
+---
+
+# Tech School Fees
+
+| Course Name | Mode | Duration | Total Fee | Registration Fee | EMI Available | Monthly EMI |
+|---|---|---|---|---|---|---|
+| Advanced Data Analytics with AI | Offline/Online | 5+1 Months | ₹98,000 | ₹5,000 | Yes | ₹16,000 |
+| Advanced Python Django with GenAI | Offline | 5+1 Months | ₹1,05,000 | ₹5,000 | Yes | ₹17,500 |
+| Data Science with GenAI | Offline/Online | 5+1 Months | ₹1,10,000 | ₹5,000 | Yes | ₹18,000 |
+| n8n for AI Agents & Automation | Online | 6 Weeks | ₹22,000 | ₹2,000 | No | — |
+| Applied AI for Beginners | Online | 4 Weeks | ₹10,000 | ₹1,000 | No | — |
+| Dashboard Mastery in Power BI + Excel | Online | 6 Weeks | ₹18,000 | ₹2,000 | No | — |
+
+---
+
+# Scholarships & Discounts
+
+| Scholarship Type | Eligibility | Discount |
+|---|---|---|
+| Early Bird Offer | Registration before batch closing | 10% |
+| Student Scholarship | College students with valid ID | 15% |
+| Referral Discount | Existing student referral | ₹5,000 |
+| Combo Program Offer | Enrolling in 2+ courses | Up to 20% |
+
+---
+
+# Payment Policies
+
+## Accepted Payment Methods
+- UPI
+- Bank Transfer
+- Debit/Credit Cards
+- EMI Financing
+- International Transfer (Dubai Campus)
+
+---
+
+## EMI Policy
+- EMI available for courses above ₹35,000
+- Minimum down payment: 20%
+- EMI duration: 3–12 months
+- Partner financing options available
+
+---
+
+## Refund Policy
+| Situation | Refund Eligibility |
+|---|---|
+| Before course start | 80% refundable |
+| Within first 7 days | 50% refundable |
+| After 7 days | Non-refundable |
+
+---
+
+## Additional Benefits
+- Free career mentoring
+- Internship opportunities
+- Placement preparation sessions
+- Portfolio review support
+- Recorded sessions for online students
+
+---
+
+# Contact for Fee Enquiries
+
+| Department | Contact |
+|---|---|
+| Admissions Office | +91 08031332470 |
+| WhatsApp Support | +91 7736779775 |
+| Email | info@harisandcoacademy.com |
+
+---
+
+# Dataset Notes
+- This file is optimized for RAG-based chatbot retrieval.
+- Fee data is structured for future vector database embedding.
+- Can later be converted into:
+  - fees.csv
+  - fees.json
+  - fee_chunks.json
+  - vector embeddings
