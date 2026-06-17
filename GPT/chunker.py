@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 
 class TextChunker:
-    def __init__(self, chunk_tokens: int = 400, overlap_tokens: int = 80):
+    def __init__(self, chunk_tokens: int = 2000, overlap_tokens: int = 200):
         self.chunk_tokens = chunk_tokens
         self.overlap_tokens = overlap_tokens
         self.enc = tiktoken.get_encoding("cl100k_base")
