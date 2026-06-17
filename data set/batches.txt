@@ -1,0 +1,43 @@
+# batches.csv
+
+```csv id="38b6z5"
+batchid,school,coursename,mode,duration,startdate,enddate,timing,campus,mentor,seatsavailable,totalcapacity,status
+
+B001,Marketing School,AI-integrated Digital Marketing,Offline,5+1 Months,2026-05-20,2026-11-20,10:00 AM - 1:00 PM,Calicut,Hima,12,25,Admission Open
+B002,Marketing School,AI-integrated Digital Marketing,Online,5 Months,2026-06-01,2026-11-01,7:00 PM - 9:00 PM,Online,Jawadha,18,30,Admission Open
+B003,Marketing School,Performance Marketing Mastery,Online,2 Months,2026-06-10,2026-08-10,8:00 PM - 9:30 PM,Online,Minhaj,20,35,Admission Open
+B004,Marketing School,Content Creation & Social Media Mastery,Online,6 Weeks,2026-06-18,2026-07-30,6:00 PM - 8:00 PM,Online,Arshad,25,40,Coming Soon
+B005,Marketing School,SEO & Blogging Strategy,Online,8 Weeks,2026-07-01,2026-08-26,7:00 PM - 8:30 PM,Online,Hima,15,30,Admission Open
+B006,Marketing School,Influencer Marketing Bootcamp,Offline,6 Weeks,2026-07-10,2026-08-21,11:00 AM - 1:00 PM,Calicut,Jawadha,10,20,Admission Open
+B007,Marketing School,Meta Ads Intensive Program,Online,1 Month,2026-07-15,2026-08-15,8:00 PM - 9:00 PM,Online,Minhaj,22,35,Admission Open
+B008,Marketing School,YouTube Growth & Monetization,Online,5 Weeks,2026-07-20,2026-08-24,6:00 PM - 7:30 PM,Online,Arshad,18,30,Admission Open
+B009,Marketing School,Google Ads Conversion Mastery,Offline,2 Months,2026-08-01,2026-10-01,10:00 AM - 12:00 PM,Calicut,Hima,9,20,Admission Open
+B010,Marketing School,Marketing Analytics with AI,Online,6 Weeks,2026-08-10,2026-09-21,7:30 PM - 9:00 PM,Online,Jawadha,20,40,Coming Soon
+
+B011,Design School,Creative Design & Communication,Offline,6 Months,2026-06-05,2026-12-05,10:00 AM - 2:00 PM,Calicut,Nabhan,10,20,Admission Open
+B012,Design School,AI Integrated Graphic Design,Online,3 Months,2026-06-12,2026-09-12,7:00 PM - 9:00 PM,Online,Pressly,15,30,Admission Open
+B013,Design School,Branding & Identity Design Mastery,Online,4 Weeks,2026-06-22,2026-07-20,8:00 PM - 9:30 PM,Online,Nabhan,20,35,Admission Open
+B014,Design School,UI/UX Design + AI Program,Online,3 Months,2026-06-15,2026-09-15,6:30 PM - 8:30 PM,Online,Faheem,14,25,Admission Open
+B015,Design School,AI Integrated Video Editing Mastery,Online,3 Months,2026-06-25,2026-09-25,7:30 PM - 9:00 PM,Online,Nanditha,16,30,Admission Open
+B016,Design School,Motion Graphics Professional Track,Offline,4 Months,2026-07-05,2026-11-05,11:00 AM - 2:00 PM,Calicut,Ashif,8,18,Admission Open
+B017,Design School,Visual Storytelling Masterclass,Online,5 Weeks,2026-07-12,2026-08-16,7:00 PM - 8:30 PM,Online,Pressly,19,35,Admission Open
+B018,Design School,Adobe Photoshop Essentials,Online,1 Month,2026-07-20,2026-08-20,8:00 PM - 9:30 PM,Online,Nanditha,24,40,Admission Open
+B019,Design School,Canva Design for Beginners,Online,3 Weeks,2026-08-01,2026-08-21,6:00 PM - 7:30 PM,Online,Faheem,28,50,Admission Open
+B020,Design School,Advanced Branding Systems,Offline,2 Months,2026-08-08,2026-10-08,10:00 AM - 1:00 PM,Calicut,Nabhan,7,15,Admission Open
+
+B021,Tech School,Advanced Data Analytics with AI,Offline/Online,5+1 Months,2026-06-01,2026-12-01,9:00 AM - 12:00 PM,Calicut,Radhika E K,8,20,Admission Open
+B022,Tech School,Advanced Python Django with GenAI,Offline,5+1 Months,2026-06-08,2026-12-08,10:00 AM - 1:00 PM,Calicut,Mohammed Nazil K,6,18,Admission Open
+B023,Tech School,Data Science with GenAI,Offline/Online,5+1 Months,2026-06-07,2026-12-07,7:00 PM - 9:00 PM,Online,Radhika E K,10,22,Admission Open
+B024,Tech School,n8n for AI Agents & Automation,Online,6 Weeks,2026-06-12,2026-07-24,8:00 PM - 9:30 PM,Online,Muhammad Sajfar,18,35,Admission Open
+B025,Tech School,Applied AI for Beginners,Online,4 Weeks,2026-06-20,2026-07-20,6:00 PM - 7:30 PM,Online,Mohammed Nazil K,25,50,Admission Open
+B026,Tech School,Dashboard Mastery in Power BI + Excel,Online,6 Weeks,2026-06-28,2026-08-09,7:30 PM - 9:00 PM,Online,Radhika E K,22,40,Admission Open
+B027,Tech School,Full Stack MERN Development,Offline,6 Months,2026-07-01,2027-01-01,10:00 AM - 2:00 PM,Calicut,Muhammad Sajfar,5,18,Admission Open
+B028,Tech School,Python for Beginners,Online,6 Weeks,2026-07-10,2026-08-21,7:00 PM - 8:30 PM,Online,Radhika E K,30,50,Admission Open
+B029,Tech School,AI Agent Development Bootcamp,Online,8 Weeks,2026-07-15,2026-09-10,8:00 PM - 9:30 PM,Online,Mohammed Nazil K,12,25,Admission Open
+B030,Tech School,Machine Learning Fundamentals,Offline/Online,3 Months,2026-08-01,2026-11-01,6:30 PM - 8:30 PM,Hybrid,Radhika E K,16,30,Admission Open
+B031,Tech School,Cloud Computing Essentials,Online,5 Weeks,2026-08-05,2026-09-09,7:00 PM - 8:30 PM,Online,Muhammad Sajfar,20,35,Admission Open
+B032,Tech School,Cybersecurity Basics,Online,2 Months,2026-08-12,2026-10-12,8:00 PM - 9:00 PM,Online,Mohammed Nazil K,18,40,Admission Open
+B033,Tech School,API Development with FastAPI,Online,6 Weeks,2026-08-20,2026-10-01,7:30 PM - 9:00 PM,Online,Radhika E K,14,30,Admission Open
+B034,Tech School,DevOps & Deployment Mastery,Offline,3 Months,2026-09-01,2026-12-01,10:00 AM - 1:00 PM,Calicut,Muhammad Sajfar,6,20,Admission Open
+B035,Tech School,AI Tools Productivity Program,Online,4 Weeks,2026-09-10,2026-10-10,6:00 PM - 7:00 PM,Online,Mohammed Nazil K,35,60,Admission Open
+```

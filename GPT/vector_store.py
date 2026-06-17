@@ -26,7 +26,7 @@ class EmbeddingGenerator:
         """
         print(f"Loading embedding model: {model_name}...")
         self.model = SentenceTransformer(model_name)
-        print(f"✓ Model loaded. Embedding dimension: {self.model.get_sentence_embedding_dimension()}")
+        print(f"[OK] Model loaded. Embedding dimension: {self.model.get_embedding_dimension()}")
     
     def embed_text(self, text: str) -> List[float]:
         """
@@ -65,7 +65,7 @@ class ChromaVectorStore:
     """
     
     def __init__(self, 
-                 db_path: str = "./chroma.db",
+                 db_path: str = "./chroma3.db",
                  collection_name: str = "haca_documents",
                  embedding_model: str = "all-MiniLM-L6-v2"):
         """
@@ -93,10 +93,10 @@ class ChromaVectorStore:
         )
         doc_count = self.collection.count()
         if doc_count > 0:
-            print(f"✓ Connected to existing collection: {collection_name}")
+            print(f"[OK] Connected to existing collection: {collection_name}")
             print(f"  Current documents: {doc_count}")
         else:
-            print(f"✓ New collection created: {collection_name}")
+            print(f"[OK] New collection created: {collection_name}")
     
     def add_chunks(self, chunks: List[Dict[str, Any]]) -> int:
         """
@@ -150,8 +150,8 @@ class ChromaVectorStore:
         )
         
         # PersistentClient auto-persists on every write — no manual call needed
-        print(f"✓ Added {len(chunks)} chunks to vector store")
-        print(f"✓ Total documents in collection: {self.collection.count()}")
+        print(f"[OK] Added {len(chunks)} chunks to vector store")
+        print(f"[OK] Total documents in collection: {self.collection.count()}")
         
         return len(chunks)
     
@@ -224,7 +224,7 @@ class ChromaVectorStore:
         if score_threshold:
             formatted_results = [r for r in formatted_results if r["similarity_score"] >= score_threshold]
         
-        print(f"✓ Found {len(formatted_results)} relevant chunks\n")
+        print(f"[OK] Found {len(formatted_results)} relevant chunks\n")
         
         return formatted_results
     
@@ -262,7 +262,7 @@ class ChromaVectorStore:
             name=self.collection_name,
             metadata={"hnsw:space": "cosine"}
         )
-        print(f"✓ Collection '{self.collection_name}' cleared")
+        print(f"[OK] Collection '{self.collection_name}' cleared")
 
 
 # Example usage and testing

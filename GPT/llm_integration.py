@@ -28,7 +28,7 @@ class LLMProvider(ABC):
 class OpenAIProvider(LLMProvider):
     """OpenAI GPT provider for answer generation."""
 
-    def __init__(self, api_key: Optional[str] = None, model: str = "gpt-3.5-turbo"):
+    def __init__(self, api_key: Optional[str] = None, model: str = "gpt-4o-mini"):
         """
         Initialize OpenAI provider.
 
@@ -36,17 +36,16 @@ class OpenAIProvider(LLMProvider):
             api_key: OpenAI API key (if None, uses environment variable)
             model: Model to use (gpt-3.5-turbo, gpt-4, etc.)
         """
-        try:
-            import openai
-            self.openai = openai
-        except ImportError:
-            raise ImportError("OpenAI package not installed. Run: pip install openai")
-
         self.api_key = api_key or os.getenv("OPENAI_API_KEY")
         if not self.api_key:
             raise ValueError("OpenAI API key not provided. Set OPENAI_API_KEY environment variable or pass api_key parameter.")
 
-        self.openai.api_key = self.api_key
+        try:
+            from openai import OpenAI
+            self.client = OpenAI(api_key=self.api_key)
+        except ImportError:
+            raise ImportError("OpenAI package not installed. Run: pip install openai")
+
         self.model = model
 
     def generate(self, prompt: str) -> str:
@@ -60,11 +59,11 @@ class OpenAIProvider(LLMProvider):
             Generated response string
         """
         try:
-            response = self.openai.ChatCompletion.create(
+            response = self.client.chat.completions.create(
                 model=self.model,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.7,
-                max_tokens=1000,
+                max_tokens=1500,
                 top_p=1.0,
                 frequency_penalty=0.0,
                 presence_penalty=0.0
@@ -126,28 +125,37 @@ class PromptBuilder:
         Returns:
             Complete prompt string
         """
-        system_prompt = f"""You are a helpful assistant for {self.institution} educational institution.
+        system_prompt = f"""You are HACA GPT - the official intelligent assistant for HACA (Haris & Co Academy), a leading professional skills training institute.
 
-Your role is to:
-1. Answer questions about courses, batches, fees, faculty, policies, and admissions
-2. Provide accurate information from the provided context only
-3. Be professional, concise, and encouraging
-4. Admit when information is not available in the context
-5. Suggest next steps when appropriate (e.g., "contact admissions for current availability")
+Your role:
+1. Answer questions about HACA courses, batches, fees, faculty, policies, and admissions with accuracy and warmth
+2. Provide information ONLY from the retrieved context - do not hallucinate or invent details
+3. Be professional, encouraging, and approachable
+4. Format your response in clean markdown when listing items
+5. Format fees with the Rs. currency symbol
+6. If information is not in the context, say: "I don't have that specific information. Please contact our admissions team at info@harisandcoacademy.com or WhatsApp +91 7736779775."
 
-Important Guidelines:
-- ONLY use information from the provided RETRIEVED CONTEXT
-- If the answer is not in the context, say: "I don't have that specific information. Please contact our admissions office."
-- Format fees with currency symbol (₹)
-- For dates, use DD-MM-YYYY format when possible
-- Be helpful and encouraging about learning opportunities
-- Keep responses clear and well-structured
-- If multiple relevant pieces of information exist, summarize them logically
+CRITICAL RULES - MUST FOLLOW:
+- When asked to list people (faculty, mentors, staff), you MUST include EVERY SINGLE person found in the context. Do NOT stop after 3 or 4. Scan the entire context and list ALL of them.
+- When listing faculty for a school/department, find everyone in that department and list them all completely.
+- Do NOT add 'I don't have information' after a partial list if more people appear in the context.
+- Do NOT truncate your answer. Always complete the full list before ending.
+- If the context has 5 faculty members, your answer MUST show all 5.
 
-Context Usage:
-- Reference specific sources when providing information
-- Combine related information from different sources
-- Prioritize the most relevant and recent information"""
+Response Format Rules:
+- Use bullet points or numbered lists for multiple items
+- Bold key information like course names, fees, dates
+- Keep responses complete - never cut off a list
+- End EVERY response with a blank line, then exactly this section:
+
+FOLLOW_UP_QUESTIONS:
+1. [relevant follow-up question]
+2. [relevant follow-up question]
+3. [relevant follow-up question]
+
+The follow-up questions must be short, relevant to what the user just asked, and genuinely helpful."""
+
+
 
         user_prompt = f"""
 
@@ -173,49 +181,45 @@ class ResponseProcessor:
     def clean_response(self, text: str) -> str:
         """
         Clean and format the LLM response.
-
-        Args:
-            text: Raw response from LLM
-
-        Returns:
-            Cleaned response string
+        Preserves newlines and markdown structure.
         """
         if not text:
             return "I apologize, but I couldn't generate a response. Please try rephrasing your question."
 
-        # Remove extra whitespace
-        text = ' '.join(text.split())
+        # Collapse multiple blank lines into a single blank line, but keep single newlines
+        import re
+        text = re.sub(r'\n{3,}', '\n\n', text)
 
-        # Fix common formatting issues
-        text = text.replace("  ", " ")
-        text = text.replace(" ,", ",")
-        text = text.replace(" .", ".")
+        # Fix inline spacing issues only (not across newlines)
+        text = re.sub(r'[ \t]{2,}', ' ', text)
+        text = text.replace(' ,', ',')
+        text = text.replace(' .', '.')
+
+        text = text.strip()
 
         # Ensure proper sentence endings
-        if not text.endswith(('.', '!', '?')):
-            text += "."
+        if text and not text[-1] in ('.', '!', '?', '\n'):
+            text += '.'
 
         return text
+
 
     def add_citations(self, response: str, sources: List[str]) -> str:
         """
         Add source citations to the response.
-
-        Args:
-            response: Cleaned response
-            sources: List of source file names
-
-        Returns:
-            Response with citations
         """
         if not sources:
             return response
 
-        # Remove duplicates and sort
-        unique_sources = sorted(list(set(sources)))
+        # Clean source names — strip file extensions for display
+        import os
+        clean_sources = sorted(set(
+            os.path.splitext(s)[0].replace('_', ' ').title() for s in sources
+        ))
 
-        citation_text = f"\n\nSources: {', '.join(unique_sources)}"
+        citation_text = f"\n\n**Sources:** {', '.join(clean_sources)}"
         return response + citation_text
+
 
     def validate_response(self, response: str) -> bool:
         """
@@ -271,17 +275,9 @@ class HACARagPipeline:
         self.prompt_builder = PromptBuilder()
         self.response_processor = ResponseProcessor()
 
-    def answer_question(self, user_query: str, k: int = 5, score_threshold: float = 0.5) -> Dict[str, Any]:
+    def answer_question(self, user_query: str, k: int = 8, score_threshold: float = 0.5) -> Dict[str, Any]:
         """
         Complete pipeline: query → retrieve → generate → process → return
-
-        Args:
-            user_query: User's question
-            k: Number of context chunks to retrieve
-            score_threshold: Minimum relevance score for context
-
-        Returns:
-            Dictionary with answer, sources, confidence, and metadata
         """
         try:
             # Step 1: Retrieve context
@@ -293,17 +289,21 @@ class HACARagPipeline:
             # Step 3: Generate answer
             raw_answer = self.llm.generate(prompt)
 
-            # Step 4: Post-process response
-            clean_answer = self.response_processor.clean_response(raw_answer)
+            # Step 4: Parse follow-up questions out of the raw answer
+            follow_ups = self._extract_follow_ups(raw_answer)
+            answer_without_followups = self._strip_follow_ups(raw_answer)
 
-            # Step 5: Add citations
+            # Step 5: Post-process response (preserves markdown/newlines)
+            clean_answer = self.response_processor.clean_response(answer_without_followups)
+
+            # Step 6: Add citations
             sources = self._extract_sources(context)
             final_answer = self.response_processor.add_citations(clean_answer, sources)
 
-            # Step 6: Calculate confidence
+            # Step 7: Calculate confidence
             confidence = self._calculate_confidence(raw_answer, context)
 
-            # Step 7: Validate response
+            # Step 8: Validate response
             is_valid = self.response_processor.validate_response(final_answer)
 
             return {
@@ -313,7 +313,8 @@ class HACARagPipeline:
                 "query": user_query,
                 "context_length": len(context),
                 "is_valid": is_valid,
-                "raw_answer": raw_answer if not is_valid else None  # Include raw for debugging if invalid
+                "follow_ups": follow_ups,
+                "raw_answer": raw_answer if not is_valid else None
             }
 
         except Exception as e:
@@ -324,8 +325,32 @@ class HACARagPipeline:
                 "query": user_query,
                 "context_length": 0,
                 "is_valid": False,
+                "follow_ups": [],
                 "error": str(e)
             }
+
+    def _extract_follow_ups(self, raw_answer: str) -> List[str]:
+        """Parse the FOLLOW_UP_QUESTIONS section from the raw LLM response."""
+        import re
+        follow_ups = []
+        # Find the FOLLOW_UP_QUESTIONS block
+        match = re.search(r'FOLLOW_UP_QUESTIONS:\s*\n(.*?)(?:\n\n|$)', raw_answer, re.DOTALL)
+        if match:
+            block = match.group(1)
+            for line in block.strip().splitlines():
+                # Strip leading "1. " or "- " numbering
+                line = re.sub(r'^[\d]+\.\s*|^[-*]\s*', '', line).strip()
+                if line:
+                    follow_ups.append(line)
+        return follow_ups[:3]  # Max 3
+
+    def _strip_follow_ups(self, raw_answer: str) -> str:
+        """Remove the FOLLOW_UP_QUESTIONS section from the answer text."""
+        import re
+        # Remove everything from FOLLOW_UP_QUESTIONS onward
+        cleaned = re.sub(r'\n*FOLLOW_UP_QUESTIONS:.*', '', raw_answer, flags=re.DOTALL)
+        return cleaned.strip()
+
 
     def _extract_sources(self, context: str) -> List[str]:
         """

@@ -1,0 +1,499 @@
+# faculty.md
+
+# HACA Faculty & Mentor Dataset
+
+## Overview
+
+HACA mentors are active industry professionals working across:
+
+* Digital Marketing
+* Branding & Design
+* Motion Graphics
+* Full Stack Development
+* Artificial Intelligence
+* Automation Systems
+* Data Analytics
+* UI/UX Design
+
+The institution follows a practical mentor-led ecosystem where students learn directly from professionals handling real-world projects and clients.
+
+---
+
+# Leadership Team
+
+## Haris Aboobacker
+
+| Attribute  | Details                                   |
+| ---------- | ----------------------------------------- |
+| Role       | Founder of Haris & Co & Director of HACA  |
+| Department | Leadership                                |
+| Experience | 10+ Years                                 |
+| Expertise  | Digital Marketing, Growth Strategy        |
+| Tools      | Meta Ads, Google Ads, Analytics Platforms |
+
+### Responsibilities
+
+* Institution leadership
+* Industry partnerships
+* Marketing ecosystem growth
+* Strategic mentorship
+
+### Skills
+
+* Brand Strategy
+* Performance Marketing
+* Client Acquisition
+* Team Management
+* Startup Growth
+
+---
+
+## Rizwan Ramzan Ahamed
+
+| Attribute  | Details                              |
+| ---------- | ------------------------------------ |
+| Role       | Co-Founder & CEO                     |
+| Department | Leadership                           |
+| Experience | 8+ Years                             |
+| Expertise  | Academic Systems & Career Guidance   |
+| Tools      | LMS Platforms, Communication Systems |
+
+### Responsibilities
+
+* Academic operations
+* Curriculum supervision
+* Student mentorship
+* Career ecosystem management
+
+### Skills
+
+* Public Speaking
+* Student Mentorship
+* Communication Training
+* Leadership Development
+
+---
+
+## Abu Nabhan
+
+| Attribute  | Details                       |
+| ---------- | ----------------------------- |
+| Role       | Founder of Design School      |
+| Department | Design School                 |
+| Experience | 7+ Years                      |
+| Expertise  | Branding & Creative Direction |
+| Tools      | Adobe Suite, Figma            |
+
+### Responsibilities
+
+* Design School leadership
+* Portfolio mentorship
+* Branding systems
+* Creative workshops
+
+### Skills
+
+* Typography
+* Brand Identity
+* Design Systems
+* Creative Thinking
+
+---
+
+# Marketing School Faculty
+
+## Hima
+
+| Attribute  | Details                      |
+| ---------- | ---------------------------- |
+| Role       | Google Ads Mentor            |
+| Department | Marketing School             |
+| Experience | 5+ Years                     |
+| Expertise  | Performance Marketing        |
+| Tools      | Google Ads, GA4, Tag Manager |
+
+### Courses Handled
+
+* AI-integrated Digital Marketing
+* SEO & Blogging Strategy
+* Google Ads Conversion Mastery
+
+### Skills
+
+* SEO
+* Analytics
+* PPC Advertising
+* Campaign Optimization
+
+---
+
+## Jawadha
+
+| Attribute  | Details                              |
+| ---------- | ------------------------------------ |
+| Role       | Social Media Marketing Mentor        |
+| Department | Marketing School                     |
+| Experience | 4+ Years                             |
+| Expertise  | Instagram Growth & Content Marketing |
+| Tools      | Meta Ads, Canva, Notion              |
+
+### Courses Handled
+
+* Influencer Marketing Bootcamp
+* AI-integrated Digital Marketing
+* Marketing Analytics with AI
+
+### Skills
+
+* Social Media Growth
+* Branding
+* Content Planning
+* Community Building
+
+---
+
+## Minhaj
+
+| Attribute  | Details                            |
+| ---------- | ---------------------------------- |
+| Role       | Creative Strategy Mentor           |
+| Department | Marketing School                   |
+| Experience | 6+ Years                           |
+| Expertise  | Advertising Funnels & Creative Ads |
+| Tools      | Meta Ads, AI Marketing Tools       |
+
+### Courses Handled
+
+* Performance Marketing Mastery
+* Meta Ads Intensive Program
+
+### Skills
+
+* Funnel Strategy
+* Ad Psychology
+* Creative Planning
+* Conversion Optimization
+
+---
+
+## Arshad
+
+| Attribute  | Details                               |
+| ---------- | ------------------------------------- |
+| Role       | Business Development Mentor           |
+| Department | Marketing School                      |
+| Experience | 5+ Years                              |
+| Expertise  | Sales Communication & Client Handling |
+| Tools      | CRM Platforms, LinkedIn               |
+
+### Courses Handled
+
+* Content Creation & Social Media Mastery
+* YouTube Growth & Monetization
+
+### Skills
+
+* Client Acquisition
+* Sales Communication
+* Personal Branding
+* Lead Conversion
+
+---
+
+# Design School Faculty
+
+## Pressly
+
+| Attribute  | Details                   |
+| ---------- | ------------------------- |
+| Role       | Visual Design Mentor      |
+| Department | Design School             |
+| Experience | 4+ Years                  |
+| Expertise  | Graphic Design & Branding |
+| Tools      | Photoshop, Illustrator    |
+
+### Courses Handled
+
+* AI Integrated Graphic Design
+* Visual Storytelling Masterclass
+
+### Skills
+
+* Typography
+* Layout Design
+* Branding
+* Poster Design
+
+---
+
+## Nanditha
+
+| Attribute  | Details                     |
+| ---------- | --------------------------- |
+| Role       | Motion Graphics Mentor      |
+| Department | Design School               |
+| Experience | 5+ Years                    |
+| Expertise  | Motion & Video Editing      |
+| Tools      | After Effects, Premiere Pro |
+
+### Courses Handled
+
+* AI Integrated Video Editing Mastery
+* Adobe Photoshop Essentials
+
+### Skills
+
+* Animation
+* Motion Graphics
+* Reels Editing
+* Storytelling
+
+---
+
+## Ashif
+
+| Attribute  | Details                    |
+| ---------- | -------------------------- |
+| Role       | Motion Graphics Mentor     |
+| Department | Design School              |
+| Experience | 3+ Years                   |
+| Expertise  | Animation & Visual Effects |
+| Tools      | Blender, After Effects     |
+
+### Courses Handled
+
+* Motion Graphics Professional Track
+
+### Skills
+
+* Storyboarding
+* Animation
+* Visual Effects
+* Motion Design
+
+---
+
+## Faheem
+
+| Attribute  | Details                         |
+| ---------- | ------------------------------- |
+| Role       | UI/UX & Motion Mentor           |
+| Department | Design School                   |
+| Experience | 4+ Years                        |
+| Expertise  | UI Systems & Interaction Design |
+| Tools      | Figma, Adobe XD                 |
+
+### Courses Handled
+
+* UI/UX Design + AI Program
+* Canva Design for Beginners
+
+### Skills
+
+* UX Research
+* Wireframing
+* Design Systems
+* User Flow Design
+
+---
+
+# Tech School Faculty
+
+## Muhammad Sajfar
+
+| Attribute  | Details                 |
+| ---------- | ----------------------- |
+| Role       | MERN Stack Mentor       |
+| Department | Tech School             |
+| Experience | 5+ Years                |
+| Expertise  | Full Stack Development  |
+| Tools      | React, Node.js, MongoDB |
+
+### Courses Handled
+
+* Full Stack MERN Development
+* DevOps & Deployment Mastery
+* n8n for AI Agents & Automation
+
+### Skills
+
+* MERN Stack
+* APIs
+* Deployment
+* DevOps
+* Automation
+
+---
+
+## Mohammed Nazil K
+
+| Attribute  | Details                      |
+| ---------- | ---------------------------- |
+| Role       | AI & Backend Mentor          |
+| Department | Tech School                  |
+| Experience | 6+ Years                     |
+| Expertise  | Python & AI Systems          |
+| Tools      | Django, FastAPI, OpenAI APIs |
+
+### Courses Handled
+
+* Advanced Python Django with GenAI
+* AI Agent Development Bootcamp
+* Applied AI for Beginners
+
+### Skills
+
+* Python
+* Django
+* AI Agents
+* APIs
+* Backend Systems
+
+---
+
+## Radhika E K
+
+| Attribute  | Details                              |
+| ---------- | ------------------------------------ |
+| Role       | Data Analytics Mentor                |
+| Department | Tech School                          |
+| Experience | 5+ Years                             |
+| Expertise  | Data Science & Business Intelligence |
+| Tools      | Python, Power BI, Excel              |
+
+### Courses Handled
+
+* Advanced Data Analytics with AI
+* Dashboard Mastery in Power BI + Excel
+* Machine Learning Fundamentals
+
+### Skills
+
+* Data Visualization
+* Machine Learning
+* Reporting Systems
+* Analytics
+
+---
+
+## Ramina Moosa
+
+| Attribute  | Details                           |
+| ---------- | --------------------------------- |
+| Role       | Frontend & Backend Mentor         |
+| Department | Tech School                       |
+| Experience | 1+ Years                          |
+| Expertise  | Python, MySQL, Django, AI Systems |
+| Tools      | Django, FastAPI, OpenAI APIs      |
+
+### Courses Handled
+
+* Python for Beginners
+* Advanced Python Django with GenAI
+* API Development with FastAPI
+
+### Skills
+
+* Python
+* Django
+* MySQL
+* Backend Development
+* Frontend Integration
+* AI Systems
+
+---
+
+## Syed Mohammed Mushthaq Ali Hadhade
+
+| Attribute  | Details                                    |
+| ---------- | ------------------------------------------ |
+| Role       | AI Engineer & LLM Systems Developer        |
+| Department | Tech School                                |
+| Experience | 1+ Years                                   |
+| Expertise  | GenAI Systems, Agentic AI, Automation, n8n |
+| Tools      | OpenAI APIs, LangChain, n8n, FastAPI       |
+
+### Courses Handled
+
+* AI Agent Development Bootcamp
+* Applied AI for Beginners
+* n8n for AI Agents & Automation
+
+### Skills
+
+* Generative AI
+* LLM Systems
+* AI Automation
+* Agentic Workflows
+* n8n Automation
+* Prompt Engineering
+* AI Integrations
+
+---
+
+# Guest Faculty Dataset
+
+| Name           | Domain         | Session Topic         |
+| -------------- | -------------- | --------------------- |
+| Adhil Rahman   | Startup Growth | Personal Branding     |
+| Fathima Noor   | UI/UX          | Product Design        |
+| Niyas Ali      | AI Research    | Future of AI          |
+| Anjana S       | HR & Placement | Interview Preparation |
+| Shamil Basheer | Freelancing    | Client Acquisition    |
+
+---
+
+# Faculty Statistics
+
+| Metric                        | Value |
+| ----------------------------- | ----- |
+| Total Mentors                 | 30+   |
+| Industry Experts              | 25+   |
+| Guest Speakers                | 15+   |
+| Placement Trainers            | 10+   |
+| Active Industry Professionals | 100%  |
+
+---
+
+# Mentor Responsibilities
+
+* Live mentoring sessions
+* Project supervision
+* Portfolio reviews
+* Assignment correction
+* Mock interviews
+* Internship guidance
+* Career mentoring
+* Industry workshops
+
+---
+
+# Faculty Support System
+
+## Student Support Includes
+
+* One-on-one mentoring
+* Weekly review sessions
+* Community support groups
+* Doubt clearing sessions
+* Portfolio correction
+
+## Mentor Availability
+
+* Online mentor groups
+* Assignment feedback
+* Live practical sessions
+* Career guidance meetings
+
+---
+
+# Dataset Notes
+
+* Optimized for RAG chatbot retrieval
+* Structured for vector database embedding
+* Future expandable into:
+
+  * faculty.json
+  * mentor_profiles.json
+  * faculty_embeddings.json
+  * mentor_courses.csv

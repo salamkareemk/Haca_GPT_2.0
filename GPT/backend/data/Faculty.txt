@@ -376,12 +376,12 @@ The institution follows a practical mentor-led ecosystem where students learn di
 
 ---
 
-## Ramina Moosa
+## Rasmina Moosa
 
 | Attribute  | Details                           |
 | ---------- | --------------------------------- |
 | Role       | Frontend & Backend Mentor         |
-| Department | Tech School                       |
+| Department | Tech School Faculty               |
 | Experience | 1+ Years                          |
 | Expertise  | Python, MySQL, Django, AI Systems |
 | Tools      | Django, FastAPI, OpenAI APIs      |

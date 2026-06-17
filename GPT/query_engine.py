@@ -112,7 +112,7 @@ class QueryEngine:
 
         return deduplicated
 
-    def build_context(self, results: List[Dict], max_length: int = 2000) -> str:
+    def build_context(self, results: List[Dict], max_length: int = 60000) -> str:
         """
         Build formatted context string from search results.
 
@@ -130,7 +130,7 @@ class QueryEngine:
         total_length = 0
 
         for i, result in enumerate(results, 1):
-            source = result.get('metadata', {}).get('source', 'Unknown')
+            source = result.get('source', 'Unknown')
             content = result.get('content', '').strip()
             score = result.get('similarity_score', 0)
 

@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 
 class TextChunker:
-    def __init__(self, chunk_tokens: int = 450, overlap_tokens: int = 80):
+    def __init__(self, chunk_tokens: int = 400, overlap_tokens: int = 80):
         self.chunk_tokens = chunk_tokens
         self.overlap_tokens = overlap_tokens
         self.enc = tiktoken.get_encoding("cl100k_base")
@@ -52,9 +52,17 @@ class TextChunker:
         return chunks_with_metadata
 
     def read_file(self, file_path: str) -> str:
-        """Read file content."""
-        with open(file_path, 'r', encoding='utf-8') as f:
-            return f.read()
+        """Read file content with robust encoding handling."""
+        # Try UTF-8 first, then fall back to latin-1 (handles most Windows files)
+        for enc in ('utf-8-sig', 'utf-8', 'latin-1'):
+            try:
+                with open(file_path, 'r', encoding=enc, errors='ignore') as f:
+                    return f.read()
+            except (UnicodeDecodeError, LookupError):
+                continue
+        # Last resort — binary read decoded loosely
+        with open(file_path, 'rb') as f:
+            return f.read().decode('utf-8', errors='replace')
 
     def process_data_files(self, data_dir: str = "backend/data") -> List[Dict[str, Any]]:
         """Process all data files in the data directory."""
@@ -95,6 +103,6 @@ class TextChunker:
 
 
 # Legacy function for backward compatibility
-def chunk_text(text: str, chunk_tokens: int = 450, overlap_tokens: int = 80) -> List[str]:
+def chunk_text(text: str, chunk_tokens: int = 400, overlap_tokens: int = 80) -> List[str]:
     chunker = TextChunker(chunk_tokens, overlap_tokens)
     return chunker.chunk_text(text)
