@@ -3,177 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HACA GPT 2.0 — Your AI Learning Assistant</title>
-  <meta name="description" content="Ask anything about HACA courses, fees, faculty, batches and admissions. Powered by AI." />
+  <title>HACA GPT — Your AI Learning Assistant</title>
+  <meta name="description" content="Ask anything about HACA courses, fees, faculty, batches and admissions." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- ── Animated Background ── -->
-  <div class="bg-orbs" aria-hidden="true">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-  </div>
-
-  <!-- ── Mobile Overlay ── -->
-  <div class="sidebar-overlay" id="sidebarOverlay"></div>
-
   <!-- ── Sidebar ── -->
   <aside class="sidebar" id="sidebar">
-    <!-- Logo -->
     <div class="sidebar-header">
-      <div class="logo-wrap">
-        <div class="logo-mark">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="currentColor" opacity=".9"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        <div>
-          <div class="logo-title">HACA GPT</div>
-          <div class="logo-sub">AI Learning Assistant 2.0</div>
-        </div>
-      </div>
-      <button class="sidebar-close-btn" id="sidebarCloseBtn" aria-label="Close sidebar">✕</button>
-    </div>
-
-    <!-- Status pill -->
-    <div class="sidebar-status-wrap">
-      <div class="status-pill" id="statusPill">
-        <span class="status-dot"></span>
-        <span id="statusText">Connecting…</span>
+      <div class="logo-mark">H</div>
+      <div>
+        <div class="logo-title">HACA GPT</div>
+        <div class="logo-sub">AI Learning Assistant</div>
       </div>
     </div>
 
-    <!-- Quick Questions -->
     <div class="sidebar-section">
       <div class="section-label">Quick Questions</div>
-      <nav class="quick-nav">
-        <button class="quick-btn" data-q="What courses does HACA offer?">
-          <span>View All Courses</span><span class="qb-arrow">›</span>
-        </button>
-        <button class="quick-btn" data-q="What are the fees for digital marketing course?">
-          <span>Course Fees</span><span class="qb-arrow">›</span>
-        </button>
-        <button class="quick-btn" data-q="Tell me about the faculty at HACA">
-          <span>Meet the Faculty</span><span class="qb-arrow">›</span>
-        </button>
-        <button class="quick-btn" data-q="When do the next batches start?">
-          <span>Batch Schedule</span><span class="qb-arrow">›</span>
-        </button>
-        <button class="quick-btn" data-q="What is the placement rate at HACA?">
-          <span>Placement Stats</span><span class="qb-arrow">›</span>
-        </button>
-        <button class="quick-btn" data-q="How can I apply or enroll at HACA?">
-          <span>How to Enroll</span><span class="qb-arrow">›</span>
-        </button>
-        <button class="quick-btn" data-q="Are there any scholarships available?">
-          <span>Scholarships</span><span class="qb-arrow">›</span>
-        </button>
-      </nav>
+      <button class="quick-btn" data-q="What courses does HACA offer?">🎓 View All Courses</button>
+      <button class="quick-btn" data-q="What are the fees for digital marketing course?">💰 Course Fees</button>
+      <button class="quick-btn" data-q="Tell me about the faculty at HACA">👨‍🏫 Meet the Faculty</button>
+      <button class="quick-btn" data-q="When do the next batches start?">📅 Batch Schedule</button>
+      <button class="quick-btn" data-q="What is the placement rate at HACA?">🚀 Placement Stats</button>
+      <button class="quick-btn" data-q="How can I apply or enroll at HACA?">📝 How to Enroll</button>
+      <button class="quick-btn" data-q="Are there any scholarships available?">🎁 Scholarships</button>
     </div>
 
-    <!-- Stats -->
     <div class="sidebar-section">
-      <div class="section-label">HACA at a Glance</div>
+      <div class="section-label">About HACA</div>
       <div class="stat-grid">
-        <div class="stat-card">
-          <span class="stat-num">15+</span>
-          <span class="stat-lbl">Courses</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-num">1000+</span>
-          <span class="stat-lbl">Placed</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-num">150+</span>
-          <span class="stat-lbl">Mentors</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-num">200+</span>
-          <span class="stat-lbl">Partners</span>
-        </div>
+        <div class="stat-card"><span class="stat-num">15+</span><span class="stat-lbl">Courses</span></div>
+        <div class="stat-card"><span class="stat-num">1000+</span><span class="stat-lbl">Placed</span></div>
+        <div class="stat-card"><span class="stat-num">150+</span><span class="stat-lbl">Mentors</span></div>
+        <div class="stat-card"><span class="stat-num">200+</span><span class="stat-lbl">Partners</span></div>
       </div>
     </div>
 
-    <!-- Contact -->
     <div class="sidebar-section">
       <div class="section-label">Contact</div>
-      <div class="contact-list">
-        <div class="contact-item">Kozhikode, Kerala</div>
-        <div class="contact-item">Dubai, UAE</div>
-        <div class="contact-item">info@harisandcoacademy.com</div>
-        <div class="contact-item">+91 7736779775</div>
-      </div>
+      <div class="contact-item">📍 Kozhikode, Kerala</div>
+      <div class="contact-item">🌍 Dubai, UAE</div>
+      <div class="contact-item">📧 info@harisandcoacademy.com</div>
+      <div class="contact-item">📱 +91 7736779775</div>
     </div>
 
-    <!-- Footer -->
     <div class="sidebar-footer">
-      <button class="clear-btn" id="clearBtn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg>
-        Clear Conversation
-      </button>
+      <button class="clear-btn" id="clearBtn">🗑️ Clear Chat</button>
     </div>
   </aside>
 
-  <!-- ── Main Chat Panel ── -->
-  <main class="chat-main" id="chatMain">
-
+  <!-- ── Main Chat ── -->
+  <main class="chat-main">
     <!-- Header -->
     <header class="chat-header">
-      <button class="menu-btn" id="menuBtn" aria-label="Open sidebar">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
-
-      <div class="header-brand">
-        <div class="header-avatar">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="currentColor"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        <div>
-          <div class="header-title">HACA GPT <span class="version-badge">2.0</span></div>
-          <div class="header-sub" id="headerSub">Initializing…</div>
-        </div>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle sidebar">☰</button>
+      <div class="header-info">
+        <div class="header-title">HACA GPT</div>
+        <div class="header-status" id="statusDot"><span class="dot"></span> Online</div>
       </div>
-
-      <div class="header-right">
-        <div class="docs-badge" id="docsBadge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-          <span id="docsCount">—</span> docs
-        </div>
+      <div class="header-actions">
+        <div class="model-badge" id="modelBadge">⚡ AI Powered</div>
       </div>
     </header>
 
-    <!-- Messages Container -->
+    <!-- Messages -->
     <div class="messages-area" id="messagesArea">
-
-      <!-- Welcome Screen -->
-      <div class="welcome-screen" id="welcomeCard">
-        <div class="welcome-glow" aria-hidden="true"></div>
-        <div class="welcome-icon-wrap">
-          <div class="welcome-icon-ring"></div>
-          <div class="welcome-icon">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="currentColor" opacity=".9"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </div>
-        </div>
-        <h1 class="welcome-title">Welcome to <span class="gradient-text">HACA GPT</span></h1>
-        <p class="welcome-sub">Your intelligent AI guide to <strong>Haris &amp; Co Academy</strong>. Ask me anything — courses, fees, faculty, batches, placements, or admissions.</p>
+      <!-- Welcome Card -->
+      <div class="welcome-card" id="welcomeCard">
+        <div class="welcome-icon">🤖</div>
+        <h2>Welcome to HACA GPT</h2>
+        <p>Your intelligent guide to everything at <strong>Haris &amp; Co Academy</strong>. Ask me about courses, fees, faculty, batches, placements, or admissions.</p>
         <div class="starter-chips" id="starterChips">
           <button class="chip" data-q="What are the top courses at HACA?">Top Courses</button>
-          <button class="chip" data-q="What is the fee for data analytics course?">Data Analytics Fees</button>
+          <button class="chip" data-q="What is the fee for data science course?">Data Science Fees</button>
           <button class="chip" data-q="Tell me about HACA's placement record">Placement Record</button>
           <button class="chip" data-q="What makes HACA different from other institutes?">Why HACA?</button>
-          <button class="chip" data-q="Are there any online courses available?">Online Courses</button>
-          <button class="chip" data-q="When is the next batch starting?">Next Batch</button>
         </div>
       </div>
     </div>
 
-    <!-- Typing Indicator -->
-    <div class="typing-indicator" id="typingIndicator" style="display:none" aria-live="polite" aria-label="HACA GPT is thinking">
-      <div class="typing-avatar">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="currentColor"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </div>
+    <!-- Typing Indicator (hidden by default) -->
+    <div class="typing-indicator" id="typingIndicator" style="display:none">
       <div class="typing-bubble">
         <span class="typing-dot"></span>
         <span class="typing-dot"></span>
@@ -182,31 +94,32 @@
       <span class="typing-label">HACA GPT is thinking…</span>
     </div>
 
-    <!-- Input Area -->
+    <!-- Input Bar -->
     <div class="input-area">
-      <div class="input-bar" id="inputBar">
+      <div class="input-bar">
         <textarea
           id="messageInput"
           class="message-input"
-          placeholder="Ask anything about HACA…"
+          placeholder="Ask anything about HACA courses, fees, batches…"
           rows="1"
           maxlength="1000"
           aria-label="Chat message input"
         ></textarea>
         <button class="send-btn" id="sendBtn" aria-label="Send message" disabled>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="22" y1="2" x2="11" y2="13"></line>
             <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
           </svg>
         </button>
       </div>
-      <div class="input-meta">
+      <div class="input-footer">
         <span class="char-count" id="charCount">0 / 1000</span>
-        <span class="powered-by">⚡ Powered by HACA RAG Engine</span>
+        <span class="powered-by">Powered by HACA RAG Engine</span>
       </div>
     </div>
   </main>
 
+  <!-- Marked.js for markdown rendering -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="app.js"></script>
 </body>

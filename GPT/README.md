@@ -1,7 +1,7 @@
 # HACA GPT 2.0 — Educational Institution RAG System
 
 > **Retrieval-Augmented Generation (RAG)** system and interactive web application for **Haris & Co Academy (HACA)**.  
-> Provides intelligent, context-aware answers about academy courses, fees, batch schedules, faculty mentors, placement stats, and enrollment policies — powered by ChromaDB, Sentence-Transformers, and local Ollama (`llama3`) integration.
+> Provides intelligent, context-aware answers about academy courses, fees, batch schedules, faculty mentors, placement stats, and enrollment policies — powered by ChromaDB, Sentence-Transformers, and OpenAI GPT integration.
 
 ---
 
@@ -23,7 +23,7 @@
 
 ## 🌟 Key Features in HACA GPT 2.0
 
-*   🎨 **Premium Dark Pastel UI:** A sleek, dark pastel twilight theme (`#16151f`) featuring beautiful frosted-glass cards, lavender and mint accents, modern typography (Plus Jakarta Sans & DM Serif Display), and clean hover interactions (emoji-free design).
+*   🎨 **Premium Glassmorphic Dark UI:** A sleek, award-winning dark theme (`#0a0a0f`) featuring beautiful frosted-glass cards, golden/amber gradients, modern typography (Inter), and hover interactions.
 *   ⌨️ **Real-Time Typing Animation:** Animated thinking bubbles that keep users engaged while the RAG model synthesizes information.
 *   ⚡ **Typewriter Effect:** Animated, word-by-word response reveal for comfortable, high-fidelity reading.
 *   🏷️ **Source Badges:** Automatically scans the context and presents beautiful labels of files referenced in the generation.
@@ -31,7 +31,7 @@
 *   💡 **Suggested Follow-Ups & Starter Questions:** Dynamically parses 3 relevant follow-up questions from the LLM prompt to suggest next steps. Also features clickable starter chips on initial load.
 *   🔄 **Safe Database Re-Indexing:** An API endpoint (`/api/repopulate`) and dedicated scripts (`populate_db.py --force` and `repopulate.py`) to clear and rebuild the database from raw files without database locks.
 *   🚀 **Auto-Initialization:** The server detects database state at startup and auto-populates it if the document count falls below threshold.
-*   🔑 **Local Ollama Integration:** Completely free and local inference using `OllamaProvider` (configured for `llama3`) to bypass OpenAI quota limits, with `MockProvider` fallback.
+*   🔑 **Dual Provider Setup:** Plug-and-play architecture featuring `OpenAIProvider` (configured for `gpt-4o-mini`) and `MockProvider` (zero-dependency local testing).
 *   📁 **BOM/Windows Native Support:** Built-in safeguards against Windows text encoding bugs, handling UTF-8 with BOM files correctly.
 
 ---
@@ -94,7 +94,7 @@
 │              Phase 3 & 4: RAG Pipeline                  │
 │  - query_engine.py: preprocessing, search, filter       │
 │  - llm_integration.py: prompts, citations, confidence   │
-│  - Ollama Provider (llama3) / Mock Provider             │
+│  - OpenAI Provider (gpt-4o-mini) / Mock Provider        │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -154,7 +154,7 @@ HACA GPT 2.0/
 *   Python 3.10+
 *   pip
 *   ~500 MB free disk space (to cache local Sentence-Transformer embedding models)
-*   [Ollama](https://ollama.com) installed with the `llama3` model (`ollama run llama3`)
+*   OpenAI API Key (Optional — falling back to `MockProvider` if missing)
 
 ### Step 1: Install Required Dependencies
 Open a terminal in the `GPT` directory:
@@ -344,10 +344,10 @@ During recent updates, several critical issues were resolved:
 | **Overlap Token Size** | 80 tokens |
 | **Embedding Dimension Count** | 384 dimensions |
 | **Persistent DB Instance** | ChromaDB (`haca_main.db`) |
-| **Active LLM Provider Model** | `llama3` (Local Ollama API) |
+| **Active LLM Provider Model** | `gpt-4o-mini` (OpenAI API) |
 | **Fallback Provider Model** | `MockProvider` (Offline testing) |
 | **Supported OS Environment** | Windows, Linux, macOS |
 
 ---
 
-**Last Updated:** June 29, 2026 | Production Build Complete ✅
+**Last Updated:** June 18, 2026 | Production Build Complete ✅

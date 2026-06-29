@@ -201,7 +201,7 @@ Yes. Students participate in creative assignments and design tasks.
 
 # Tech School FAQs
 
-## Python, AI & Data Analytics Programs
+## Python, AI & Data Science Programs
 
 ### Which programming language is taught first?
 

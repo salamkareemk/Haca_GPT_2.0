@@ -77,47 +77,6 @@ class OpenAIProvider(LLMProvider):
         return bool(self.api_key)
 
 
-class OllamaProvider(LLMProvider):
-    """Local LLM provider using Ollama's OpenAI-compatible endpoint."""
-
-    def __init__(self, model: str = "llama3"):
-        """Initialize Ollama provider."""
-        try:
-            from openai import OpenAI
-            self.client = OpenAI(
-                base_url="http://localhost:11434/v1/",
-                api_key="ollama"  # API key is required but ignored by Ollama
-            )
-            self.model = model
-            self.available = True
-        except ImportError:
-            self.available = False
-            print("OpenAI package not installed.")
-        except Exception as e:
-            self.available = False
-            print(f"Ollama init error: {e}")
-
-    def generate(self, prompt: str) -> str:
-        """Generate response using local Ollama model."""
-        try:
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=[{"role": "user", "content": prompt}],
-                temperature=0.7,
-                max_tokens=1500,
-                top_p=1.0,
-                frequency_penalty=0.0,
-                presence_penalty=0.0
-            )
-            return response.choices[0].message.content.strip()
-        except Exception as e:
-            return f"Error generating response from Ollama: {str(e)}"
-
-    def is_available(self) -> bool:
-        """Check if Ollama is available."""
-        return self.available
-
-
 class MockProvider(LLMProvider):
     """Mock provider for testing without API calls."""
 
