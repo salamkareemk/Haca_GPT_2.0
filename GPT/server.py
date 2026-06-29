@@ -31,7 +31,7 @@ except ImportError:
 # ─── Import Pipeline Components ───────────────────────────────────────────────
 from vector_store import ChromaVectorStore
 from query_engine  import QueryEngine
-from llm_integration import HACARagPipeline, OpenAIProvider, MockProvider
+from llm_integration import HACARagPipeline, OpenAIProvider, MockProvider, OllamaProvider
 
 # ─── Flask App ────────────────────────────────────────────────────────────────
 app = Flask(__name__, static_folder=str(FRONTEND_DIR))
@@ -95,15 +95,15 @@ def initialize_pipeline():
     print("\n[3/3] Setting up LLM provider ...")
     api_key = os.getenv("OPENAI_API_KEY", "")
 
-    if api_key.startswith("sk-"):
-        try:
-            provider = OpenAIProvider(api_key=api_key, model="gpt-4o-mini")
-            print("  [OK] OpenAI gpt-4o-mini ready.")
-        except Exception as e:
-            print(f"  [WARN] OpenAI init failed: {e}. Using MockProvider.")
-            provider = MockProvider()
-    else:
-        print("  [WARN] No valid OPENAI_API_KEY. Using MockProvider.")
+    # Try Ollama first since OpenAI quota is exceeded
+    print("  [INFO] OpenAI quota exceeded. Attempting to use local Ollama (llama3)...")
+    try:
+        provider = OllamaProvider(model="llama3")
+        # Test generation to ensure Ollama is actually running
+        _ = provider.generate("test")
+        print("  [OK] Local Ollama (llama3) is ready and connected!")
+    except Exception as e:
+        print(f"  [WARN] Ollama init failed: {e}. Falling back to MockProvider.")
         provider = MockProvider()
 
     pipeline = HACARagPipeline(vector_store, provider, query_engine)
