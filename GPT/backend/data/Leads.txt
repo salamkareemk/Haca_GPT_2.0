@@ -11,7 +11,6 @@ L003,Arjun Krishnan,arjunkrishnan@gmail.com,+919876543212,Male,24,Kochi,Kerala,I
 
 L004,Hana Mariyam,hanamariyam@gmail.com,+919876543213,Female,20,Thrissur,Kerala,India,Design School,AI Integrated Video Editing Mastery,BA English,Beginner,Student,Online,Instagram,69,2026-05-03,2026-05-06,Nanditha,Warm Lead,Demo Class Attended,Interested in freelancing
 
-L005,Sreerag P,sreeragp@gmail.com,+919876543214,Male,23,Palakkad,Kerala,India,Tech School,AI Agent Development Bootcamp,BCA Graduate,Intermediate,Freelancer,Online,LinkedIn,88,2026-05-04,2026-05-07,Syed Mohammed Mushthaq Ali Hadhade,Hot Lead,Admission Discussion,Wants AI automation career
 
 L006,Ayisha Noor,ayishanoor@gmail.com,+919876543215,Female,19,Kannur,Kerala,India,Marketing School,Content Creation & Social Media Mastery,Plus Two,Beginner,Student,Online,YouTube,72,2026-05-05,2026-05-08,Arshad,Warm Lead,Follow-up Pending,Interested in influencer career
 
@@ -27,7 +26,6 @@ L011,Shamil Basheer,shamilbasheer@gmail.com,+919876543220,Male,26,Dubai,Dubai,UA
 
 L012,Fida Shirin,fidashirin@gmail.com,+919876543221,Female,22,Kottayam,Kerala,India,Design School,Branding & Identity Design Mastery,BDes Student,Intermediate,Student,Online,Website,73,2026-05-08,2026-05-13,Nabhan,Warm Lead,Demo Class Attended,Strong creative background
 
-L013,Niyas Mohammed,niyasmohammed@gmail.com,+919876543222,Male,27,Bangalore,Karnataka,India,Tech School,DevOps & Deployment Mastery,BTech IT,Advanced,Working Professional,Online,LinkedIn,90,2026-05-09,2026-05-14,Muhammad Sajfar,Hot Lead,Technical Discussion,Interested in cloud deployment
 
 L014,Hiba Rahman,hibarahman@gmail.com,+919876543223,Female,20,Kollam,Kerala,India,Marketing School,YouTube Growth & Monetization,BSc Student,Beginner,Content Creator,Online,YouTube,70,2026-05-10,2026-05-15,Arshad,Warm Lead,Follow-up Pending,Wants personal branding guidance
 
@@ -35,11 +33,9 @@ L015,Adil Hussain,adilhussain@gmail.com,+919876543224,Male,23,Chennai,Tamil Nadu
 
 L016,Sana Fathima,sanafathima@gmail.com,+919876543225,Female,21,Alappuzha,Kerala,India,Design School,Canva Design for Beginners,Plus Two,Beginner,Student,Online,Instagram,62,2026-05-11,2026-05-17,Faheem,Cold Lead,Initial Enquiry,Needs beginner-friendly guidance
 
-L017,Rahul Krishna,rahulkrishna@gmail.com,+919876543226,Male,28,Hyderabad,Telangana,India,Tech School,Machine Learning Fundamentals,MCA Graduate,Advanced,Working Professional,Hybrid,LinkedIn,89,2026-05-11,2026-05-18,Radhika E K,Hot Lead,Career Transition Discussion,Interested in AI industry
 
 L018,Noora Basith,noorabasith@gmail.com,+919876543227,Female,22,Manjeri,Kerala,India,Marketing School,Marketing Analytics with AI,BBA Graduate,Intermediate,Job Seeker,Online,Referral,77,2026-05-12,2026-05-19,Jawadha,Warm Lead,Portfolio Planning,Interested in analytics
 
 L019,Amal Krishna,amalkrishna@gmail.com,+919876543228,Male,24,Trivandrum,Kerala,India,Design School,Motion Graphics Professional Track,BSc Animation,Intermediate,Freelancer,Offline,Instagram,81,2026-05-12,2026-05-20,Ashif,Hot Lead,Portfolio Review,Interested in animation studio jobs
 
-L020,Zayan Ahmed,zayanahmed@gmail.com,+919876543229,Male,19,Kozhikode,Kerala,India,Tech School,Python for Beginners,Plus Two,Beginner,Student,Online,Website,65,2026-05-12,2026-05-21,Ramina Moosa,Warm Lead,Beginner Counselling,Wants coding basics
 ```

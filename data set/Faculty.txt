@@ -312,7 +312,6 @@ The institution follows a practical mentor-led ecosystem where students learn di
 ### Courses Handled
 
 * Full Stack MERN Development
-* DevOps & Deployment Mastery
 * n8n for AI Agents & Automation
 
 ### Skills
@@ -338,7 +337,6 @@ The institution follows a practical mentor-led ecosystem where students learn di
 ### Courses Handled
 
 * Advanced Python Django with GenAI
-* AI Agent Development Bootcamp
 * Applied AI for Beginners
 
 ### Skills
@@ -364,8 +362,6 @@ The institution follows a practical mentor-led ecosystem where students learn di
 ### Courses Handled
 
 * Advanced Data Analytics with AI
-* Dashboard Mastery in Power BI + Excel
-* Machine Learning Fundamentals
 
 ### Skills
 
@@ -388,9 +384,7 @@ The institution follows a practical mentor-led ecosystem where students learn di
 
 ### Courses Handled
 
-* Python for Beginners
 * Advanced Python Django with GenAI
-* API Development with FastAPI
 
 ### Skills
 
@@ -415,7 +409,6 @@ The institution follows a practical mentor-led ecosystem where students learn di
 
 ### Courses Handled
 
-* AI Agent Development Bootcamp
 * Applied AI for Beginners
 * n8n for AI Agents & Automation
 

@@ -220,7 +220,6 @@ The testimonials are structured for:
 
 | Attribute    | Details                       |
 | ------------ | ----------------------------- |
-| Course       | AI Agent Development Bootcamp |
 | Current Role | AI Automation Engineer        |
 | Background   | Python Learner                |
 | Mode         | Online                        |
@@ -258,7 +257,6 @@ The testimonials are structured for:
 
 | Attribute    | Details                 |
 | ------------ | ----------------------- |
-| Course       | Python for Beginners    |
 | Current Role | Junior Python Developer |
 | Background   | Beginner                |
 | Mode         | Online                  |

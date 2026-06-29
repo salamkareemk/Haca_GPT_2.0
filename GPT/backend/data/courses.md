@@ -32,6 +32,5 @@
 | Data Analytics with GenAI | Online/Offline | 5 Months + 1 Month Project | Comprehensive Data Analytics training in machine learning and GenAI. |
 | n8n for AI Agents & Automation | Online | 6 Weeks | Build workflows and automations using no-code tools like Slack and Google Sheets. |
 | Applied AI for Beginners | Online | 4 Weeks | Foundational AI and automation crash course using ChatGPT and practical tools. |
-| Dashboard Mastery in Power BI + Excel | Online | 6 Weeks | Develop analytical dashboards for business intelligence and reporting. |
 
 **Special Offer:** Enrol in any flagship tech program and get “Applied AI for Beginners” (₹10,000 value) free.  
