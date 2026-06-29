@@ -1,166 +1,144 @@
-# HACA GPT — Educational Institution RAG System
+# HACA GPT 2.0 — Educational Institution RAG System
 
-> **Retrieval-Augmented Generation (RAG)** backend for the HACA educational institution.  
-> Provides intelligent, context-aware answers about courses, fees, batches, faculty, policies, and admissions — powered by ChromaDB + Sentence-Transformers + LLM integration.
+> **Retrieval-Augmented Generation (RAG)** system and interactive web application for **Haris & Co Academy (HACA)**.  
+> Provides intelligent, context-aware answers about academy courses, fees, batch schedules, faculty mentors, placement stats, and enrollment policies — powered by ChromaDB, Sentence-Transformers, and OpenAI GPT integration.
 
 ---
 
 ## 🚦 Project Status
 
-| Phase | Task | Status |
-|-------|------|--------|
-| 1 | Text Chunking | ✅ Complete |
-| 2 | Vector Embeddings & ChromaDB | ✅ Complete |
-| 3 | Query Retrieval & Context Building | ✅ Complete |
-| 4 | LLM Integration & Answer Generation | ✅ Complete |
-| **Backend** | **All Tests Passing** | **✅ Ready for Frontend** |
+| Component | Task | Status |
+| :--- | :--- | :--- |
+| **Phase 1** | Text Chunking (`chunker.py`) | ✅ Complete |
+| **Phase 2** | Vector Embeddings & ChromaDB (`vector_store.py`) | ✅ Complete |
+| **Phase 3** | Query Retrieval & Context Building (`query_engine.py`) | ✅ Complete |
+| **Phase 4** | LLM Integration & Answer Generation (`llm_integration.py`) | ✅ Complete |
+| **Backend API** | Flask REST API Server (`server.py`) | ✅ Complete |
+| **Frontend UI** | Premium Glassmorphism Chat Interface (`frontend/`) | ✅ Complete |
+| **Testing** | E2E System Tests & Verification (`test_pipeline.py`) | ✅ Complete |
 
-> **Last run:** All 3 test suites passed — QueryEngine ✅ · RAG Pipeline ✅ · OpenAI Provider ✅
+> **Last Build Verification:** All test suites passing, database population verified, web UI fully interactive, and API endpoints verified online.
 
 ---
 
-## Table of Contents
+## 🌟 Key Features in HACA GPT 2.0
+
+*   🎨 **Premium Glassmorphic Dark UI:** A sleek, award-winning dark theme (`#0a0a0f`) featuring beautiful frosted-glass cards, golden/amber gradients, modern typography (Inter), and hover interactions.
+*   ⌨️ **Real-Time Typing Animation:** Animated thinking bubbles that keep users engaged while the RAG model synthesizes information.
+*   ⚡ **Typewriter Effect:** Animated, word-by-word response reveal for comfortable, high-fidelity reading.
+*   🏷️ **Source Badges:** Automatically scans the context and presents beautiful labels of files referenced in the generation.
+*   📊 **Confidence Meter:** A visual grading bar showing the estimated confidence (0.0 to 1.0) of each response.
+*   💡 **Suggested Follow-Ups & Starter Questions:** Dynamically parses 3 relevant follow-up questions from the LLM prompt to suggest next steps. Also features clickable starter chips on initial load.
+*   🔄 **Safe Database Re-Indexing:** An API endpoint (`/api/repopulate`) and dedicated scripts (`populate_db.py --force` and `repopulate.py`) to clear and rebuild the database from raw files without database locks.
+*   🚀 **Auto-Initialization:** The server detects database state at startup and auto-populates it if the document count falls below threshold.
+*   🔑 **Dual Provider Setup:** Plug-and-play architecture featuring `OpenAIProvider` (configured for `gpt-4o-mini`) and `MockProvider` (zero-dependency local testing).
+*   📁 **BOM/Windows Native Support:** Built-in safeguards against Windows text encoding bugs, handling UTF-8 with BOM files correctly.
+
+---
+
+## 📅 Table of Contents
 
 1. [Architecture](#architecture)
-2. [Setup & Installation](#setup--installation)
-3. [Project Structure](#project-structure)
-4. [Components](#components)
-5. [Usage Guide](#usage-guide)
-6. [API Reference](#api-reference)
-7. [Running Tests](#running-tests)
-8. [Troubleshooting](#troubleshooting)
-9. [Next Steps](#next-steps)
+2. [Project Structure](#project-structure)
+3. [Setup & Installation](#setup--installation)
+4. [Backend Components](#backend-components)
+5. [Frontend Interface](#frontend-interface)
+6. [REST API Reference](#rest-api-reference)
+7. [Running the Application](#running-the-application)
+8. [Testing Suite](#testing-suite)
+9. [Bug Fixes & System Optimizations](#bug-fixes--system-optimizations)
+10. [Project Metrics & Statistics](#project-metrics--statistics)
 
 ---
 
-## Architecture
+## 🗺️ Architecture
 
 ```
-┌──────────────────────────────────────────────────────┐
-│               Data Source (10 Files)                 │
-│  batches.txt · courses.md · faculty.txt · faq.txt   │
-│  fees.txt · institution_profile.md · leads.txt      │
-│  placement.txt · policies.txt · testimonials.txt    │
-└──────────────────┬───────────────────────────────────┘
-                   │
-                   ▼
-┌──────────────────────────────────────────────────────┐
-│       Phase 1 ✅  Text Chunking (chunker.py)         │
-│  · Token-based chunking via tiktoken (cl100k_base)  │
-│  · 450-token chunks with 80-token overlap           │
-│  · Metadata: source, file_type, line numbers        │
-│  · Output: 47 chunks across 10 files                │
-└──────────────────┬───────────────────────────────────┘
-                   │
-                   ▼
-┌──────────────────────────────────────────────────────┐
-│    Phase 2 ✅  Vector Embeddings (vector_store.py)   │
-│  · EmbeddingGenerator: all-MiniLM-L6-v2 (384-dim)  │
-│  · ChromaVectorStore: persistent ChromaDB storage   │
-│  · get_or_create_collection — idempotent & safe     │
-│  · Cosine similarity search                         │
-└──────────────────┬───────────────────────────────────┘
-                   │
-                   ▼
-┌──────────────────────────────────────────────────────┐
-│     Phase 3 ✅  Query Retrieval (query_engine.py)    │
-│  · Query preprocessing (normalize, lowercase)       │
-│  · Semantic search (top-K chunks)                   │
-│  · Score filtering & deduplication                  │
-│  · Formatted context builder                        │
-└──────────────────┬───────────────────────────────────┘
-                   │
-                   ▼
-┌──────────────────────────────────────────────────────┐
-│   Phase 4 ✅  LLM Integration (llm_integration.py)   │
-│  · LLMProvider (abstract) — plug-and-play design    │
-│  · OpenAIProvider (gpt-3.5-turbo / gpt-4)          │
-│  · MockProvider (zero-dependency testing)           │
-│  · PromptBuilder — structured RAG prompts           │
-│  · ResponseProcessor — cleaning, citations, QA      │
-│  · HACARagPipeline — end-to-end orchestrator        │
-└──────────────────────────────────────────────────────┘
-```
-
----
-
-## Setup & Installation
-
-### Prerequisites
-
-- Python 3.10+
-- pip
-- ~500 MB free disk space (embedding model cache)
-
-### Step 1: Install Dependencies
-
-```bash
-cd "C:\Users\salam\OneDrive\Desktop\HACA\HACA GPT\GPT"
-
-pip install tiktoken chromadb sentence-transformers
-# Optional — only needed to use real OpenAI responses:
-pip install openai
-```
-
-**Package overview:**
-
-| Package | Purpose |
-|---------|---------|
-| `tiktoken` | Token-based text chunking (cl100k_base) |
-| `chromadb` | Persistent vector database |
-| `sentence-transformers` | Local embedding model (all-MiniLM-L6-v2) |
-| `openai` | GPT-3.5/GPT-4 LLM provider (optional) |
-
-### Step 2: Configure Environment (Optional)
-
-Create a `.env` file in the project root for OpenAI:
-
-```env
-OPENAI_API_KEY=sk-...your-key-here...
-```
-
-Or set it as a shell variable:
-
-```powershell
-$env:OPENAI_API_KEY = "sk-..."
-```
-
-> Without a key, the system runs with the built-in `MockProvider` — all pipeline logic still works.
-
-### Step 3: Verify Installation
-
-```bash
-python -c "import tiktoken; import chromadb; from sentence_transformers import SentenceTransformer; print('All packages OK')"
+                  ┌──────────────────────────────┐
+                  │   Data Sources (10 Files)    │
+                  │   courses, fees, faculty...  │
+                  └──────────────┬───────────────┘
+                                 │
+                                 ▼
+                  ┌──────────────────────────────┐
+                  │ Phase 1: chunker.py (tiktoken)│
+                  │ - 450-token chunks, 80 overlap│
+                  │ - Windows BOM-handling fixed │
+                  └──────────────┬───────────────┘
+                                 │
+                                 ▼
+                  ┌──────────────────────────────┐
+                  │Phase 2: vector_store.py      │
+                  │- all-MiniLM-L6-v2 (384-dim)  │
+                  │- haca_main.db (ChromaDB)     │
+                  └──────────────┬───────────────┘
+                                 │
+                  ┌──────────────┴───────────────┐
+                  ▼                              ▼
+      ┌──────────────────────┐        ┌──────────────────────┐
+      │   Flask REST API     │        │  Streamlit Tester    │
+      │   (server.py:5000)   │        │     (app.py)         │
+      └──────────┬───────────┘        └──────────┬───────────┘
+                 │                               │
+                 ▼                               │
+      ┌──────────────────────┐                   │
+      │ Premium Glassmorphic │                   │
+      │ Frontend Web App     │                   │
+      └──────────┬───────────┘                   │
+                 │                               │
+                 ▼                               ▼
+            ┌───────── User Queries / Messages ─────────┐
+            │                     │                     │
+            ▼                     ▼                     ▼
+┌─────────────────────────────────────────────────────────┐
+│              Phase 3 & 4: RAG Pipeline                  │
+│  - query_engine.py: preprocessing, search, filter       │
+│  - llm_integration.py: prompts, citations, confidence   │
+│  - OpenAI Provider (gpt-4o-mini) / Mock Provider        │
+└─────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
-HACA GPT/
-├── .env                          # API keys (not committed)
+HACA GPT 2.0/
+├── .env                          # API keys and global env variables
+├── chroma.db/                    # Persistent vector DB (legacy/unused)
+├── data set/                     # Copy of the original text datasets
+├── whatsapp-web.js-main/         # WhatsApp Web library files (legacy/unused)
 └── GPT/
     ├── README.md                 # This file
-    ├── chunker.py                # Phase 1 — Text chunking
-    ├── vector_store.py           # Phase 2 — ChromaDB embeddings
-    ├── query_engine.py           # Phase 3 — Query retrieval
-    ├── llm_integration.py        # Phase 4 — LLM + RAG pipeline
-    ├── test_pipeline.py          # Full system tests
-    ├── chroma.db/                # Persistent vector DB (auto-created)
+    ├── server.py                 # Flask REST API Server serving the premium frontend
+    ├── app.py                    # Streamlit RAG Agent Tester (fallback interface)
+    ├── chunker.py                # Phase 1: Text splitting, token counting (tiktoken)
+    ├── vector_store.py           # Phase 2: Embedding generation & ChromaDB store
+    ├── query_engine.py           # Phase 3: Semantic retrieval & context assembly
+    ├── llm_integration.py        # Phase 4: Prompt builder, LLM connectors & post-processor
+    ├── populate_db.py            # CLI DB seeding tool with --force flag
+    ├── repopulate.py             # CLI DB clean and repopulation utility script
+    ├── run.bat                   # Windows batch launcher (auto python interpreter detection)
+    ├── test_pipeline.py          # Complete E2E system testing script
+    ├── haca_main.db/             # Canonical persistent Chroma DB
     ├── backend/
-    │   └── data/
-    │       ├── batches.txt
-    │       ├── courses.md
-    │       ├── Faculty.txt
-    │       ├── Faq.txt
-    │       ├── fees.txt
-    │       ├── institution_profile.md
-    │       ├── Leads.txt
-    │       ├── Placement.txt
-    │       ├── Policies.txt
-    │       └── Testimonials.txt
-    └── docs/
+    │   └── data/                 # Raw dataset files
+    │       ├── .env              # Environment configurations for the backend
+    │       ├── batches.txt       # Course batch schedules and capacities
+    │       ├── courses.md        # Syllabus and school descriptions
+    │       ├── Faculty.txt       # Faculty profiles and mentor names
+    │       ├── Faq.txt           # FAQ entries
+    │       ├── fees.txt          # Pricing, payment options, scholarships
+    │       ├── institution_profile.md # HACA vision, mission, location details
+    │       ├── Leads.txt         # Contact forms, lead capture fields
+    │       ├── Placement.txt     # Placements percentages and reviews
+    │       ├── Policies.txt      # Refund, attendance and code of conduct policies
+    │       └── Testimonials.txt  # Student comments
+    ├── frontend/                 # Premium Web Application folder
+    │   ├── index.html            # Main markup page structure
+    │   ├── style.css             # Glassmorphism theme, responsiveness and animations
+    │   └── app.js                # Chat logic, event handlers, typewriter effects
+    └── docs/                     # Additional phase-specific documentation
         ├── PHASE_2_DOCUMENTATION.md
         ├── PHASE_3_DOCUMENTATION.md
         ├── PHASE_4_DOCUMENTATION.md
@@ -168,401 +146,208 @@ HACA GPT/
         └── IMPLEMENTATION_CHECKLIST.md
 ```
 
-### Data Files
+---
 
-| File | Content | Chunks |
-|------|---------|--------|
-| batches.txt | Course batch schedules, timing, capacity (CSV) | 6 |
-| courses.md | Course descriptions — Marketing, Design, Tech | 2 |
-| Faculty.txt | Faculty profiles and expertise areas | 7 |
-| Faq.txt | Frequently asked questions and answers | 6 |
-| fees.txt | Fee structure, payment plans, scholarships | 3 |
-| institution_profile.md | HACA overview, mission, values | 2 |
-| Leads.txt | Lead management and contact information | 5 |
-| Placement.txt | Placement statistics and success stories | 5 |
-| Policies.txt | Academic and administrative policies | 5 |
-| Testimonials.txt | Student testimonials and reviews | 6 |
-| **Total** | | **47 chunks** |
+## 🛠️ Setup & Installation
+
+### Prerequisites
+*   Python 3.10+
+*   pip
+*   ~500 MB free disk space (to cache local Sentence-Transformer embedding models)
+*   OpenAI API Key (Optional — falling back to `MockProvider` if missing)
+
+### Step 1: Install Required Dependencies
+Open a terminal in the `GPT` directory:
+```bash
+pip install flask flask-cors tiktoken chromadb sentence-transformers python-dotenv openai streamlit
+```
+
+### Step 2: Configure Environment Settings
+Create a `.env` file in `GPT/backend/data/` or copy `.env` from your project directory. It should contain:
+```env
+OPENAI_API_KEY=sk-your-openai-api-key-here
+```
+
+### Step 3: Populate Database
+Populate the vector database with the initial dataset chunks:
+```bash
+python populate_db.py
+```
+*(Run `python populate_db.py --force` to override and rebuild).*
 
 ---
 
-## Components
+## ⚙️ Backend Components
 
 ### Phase 1 — `chunker.py`
-
-Converts raw data files into semantically coherent, overlapping text chunks with full metadata.
-
-**Key class:** `TextChunker`
-
-```python
-from chunker import TextChunker
-
-chunker = TextChunker(chunk_tokens=450, overlap_tokens=80)
-
-# Process all 10 data files at once
-chunks = chunker.process_data_files('backend/data')
-# → 47 chunks, each with: content, source, file_type, start_line, end_line, chunk_index
-```
-
-**Chunk schema:**
-```python
-{
-    "content": "chunk text...",
-    "source": "fees.txt",
-    "file_type": "txt",
-    "start_line": 0,
-    "end_line": 23,
-    "chunk_index": 2
-}
-```
-
----
+Splits raw text files into semantic chunks with metadata preservation.
+*   **Tokenization Engine:** Uses tiktoken's `cl100k_base` encoder (matching OpenAI's GPT encoding).
+*   **Configurations:** Splits into chunks of 450 tokens with an 80-token overlap between adjacent chunks.
+*   **BOM Handling:** Features automatic encoding fallbacks to decode files with Byte Order Marks on Windows machines safely.
 
 ### Phase 2 — `vector_store.py`
-
-Manages embedding generation and persistent ChromaDB storage.
-
-**Key classes:** `EmbeddingGenerator`, `ChromaVectorStore`
-
-```python
-from vector_store import ChromaVectorStore
-
-# Auto-connects to existing collection OR creates a new one — never errors
-vs = ChromaVectorStore(
-    db_path="./chroma.db",
-    collection_name="haca_documents",
-    embedding_model="all-MiniLM-L6-v2"
-)
-
-# Add chunks (generates and stores embeddings)
-vs.add_chunks(chunks)
-
-# Semantic search
-results = vs.search("What are the course fees?", k=5)
-
-# Stats
-print(vs.get_stats())
-# → {'collection_name': 'haca_documents', 'total_documents': 47, ...}
-```
-
-**ChromaDB collection schema:**
-```python
-{
-    "documents": ["chunk text 1", ...],
-    "embeddings": [[0.12, -0.04, ..., 0.31], ...],  # 384-dim
-    "metadatas": [{"source": "fees.txt", "chunk_index": 0}, ...],
-    "ids": ["chunk_0", "chunk_1", ...]
-}
-```
-
-> **Note:** `get_or_create_collection()` is used throughout — connecting to an existing collection never raises errors regardless of how many times the app restarts.
-
----
+Maintains embedding model downloads and handles storage in ChromaDB.
+*   **Embedding Model:** Local `all-MiniLM-L6-v2` model (384 dimensions).
+*   **Database Management:** Automatically manages connections. Uses `get_or_create_collection()` with cosine distance calculation space to eliminate database creation conflicts.
 
 ### Phase 3 — `query_engine.py`
-
-Retrieval layer between the user query and the vector database.
-
-**Key class:** `QueryEngine`
-
-```python
-from query_engine import QueryEngine
-
-engine = QueryEngine(vector_store=vs)
-
-# Full pipeline: preprocess → search → filter → deduplicate → format
-context = engine.process_query(
-    query="What are the fees for the marketing course?",
-    k=5,
-    score_threshold=0.5
-)
-# → Formatted context string ready for LLM injection
-```
-
-**Pipeline steps:**
-
-1. `preprocess_query()` — strip, lowercase, normalize punctuation
-2. `search_similar()` — semantic vector search (top-K)
-3. `filter_results()` — minimum similarity score filter
-4. `deduplicate_results()` — remove redundant chunks
-5. `build_context()` — format with source citations and relevance scores
-
----
+Retrieves information based on queries.
+*   **Normalizer:** Strips spaces, lowercases input, and filters punctuation.
+*   **Filter & Deduplicator:** Applies a minimum similarity score threshold and discards duplicate text blocks.
+*   **Context Formatter:** Formats retrieved blocks with numerical citation brackets (e.g., `[From courses.md]`).
 
 ### Phase 4 — `llm_integration.py`
-
-End-to-end RAG orchestration: context → prompt → LLM → clean answer.
-
-**Key classes:** `HACARagPipeline`, `OpenAIProvider`, `MockProvider`, `PromptBuilder`, `ResponseProcessor`
-
-```python
-from llm_integration import HACARagPipeline, MockProvider, OpenAIProvider
-
-# With Mock (no API key needed — great for testing)
-provider = MockProvider()
-
-# With OpenAI (requires OPENAI_API_KEY)
-# provider = OpenAIProvider(model="gpt-3.5-turbo")
-
-pipeline = HACARagPipeline(
-    vector_store=vs,
-    llm_provider=provider,
-    query_engine=engine
-)
-
-result = pipeline.answer_question("What are the course fees?")
-```
-
-**Result schema:**
-```python
-{
-    "answer": "Course fees start at ₹15,000...\n\nSources: fees.txt",
-    "sources": ["fees.txt"],
-    "confidence": 0.85,
-    "query": "What are the course fees?",
-    "context_length": 1240,
-    "is_valid": True,
-    "raw_answer": None   # Only populated if validation fails
-}
-```
-
-**Answer pipeline (7 steps):**
-
-```
-User Query
-    ↓ 1. Retrieve context (QueryEngine)
-    ↓ 2. Build prompt (PromptBuilder)
-    ↓ 3. Generate answer (LLMProvider)
-    ↓ 4. Clean response (ResponseProcessor)
-    ↓ 5. Add citations
-    ↓ 6. Calculate confidence score
-    ↓ 7. Validate response quality
-Final Answer Dict
-```
+Orchestrates prompt generation, model response querying, and post-generation analysis.
+*   **Prompt Builder:** Injecting retrieved text alongside strict prompt guidelines (avoiding hallucinations, forcing comprehensive lists, and appending follow-up suggestion markers).
+*   **Response Cleaner:** Removes double-spaces while preserving line breaks and carriage returns.
+*   **Metadata Parser:** Extracts sources from context blocks and splits the response text to separate suggestions from answers.
 
 ---
 
-## Usage Guide
+## 💻 Frontend Interface
 
-### Quick Start — Full Pipeline
+The web app is located in `GPT/frontend/` and served directly by the Flask server.
 
-```python
-from chunker import TextChunker
-from vector_store import ChromaVectorStore
-from query_engine import QueryEngine
-from llm_integration import HACARagPipeline, MockProvider
-
-# 1. Load and chunk data
-chunker = TextChunker()
-chunks = chunker.process_data_files('backend/data')
-
-# 2. Store embeddings (only needed once — persists to chroma.db)
-vs = ChromaVectorStore()
-vs.add_chunks(chunks)
-
-# 3. Set up retrieval and generation
-engine = QueryEngine(vs)
-pipeline = HACARagPipeline(vs, MockProvider(), engine)
-
-# 4. Ask a question
-result = pipeline.answer_question("When do the next batches start?")
-print(result['answer'])
-```
-
-### Reconnecting to Existing Data (Subsequent Runs)
-
-```python
-# No need to re-chunk or re-embed — just connect
-vs = ChromaVectorStore()           # Reconnects to existing chroma.db
-engine = QueryEngine(vs)
-pipeline = HACARagPipeline(vs, MockProvider(), engine)
-
-result = pipeline.answer_question("What is the placement rate?")
-```
-
-### Switching to OpenAI
-
-```python
-import os
-from llm_integration import OpenAIProvider
-
-provider = OpenAIProvider(
-    api_key=os.getenv("OPENAI_API_KEY"),
-    model="gpt-4"  # or "gpt-3.5-turbo"
-)
-pipeline = HACARagPipeline(vs, provider, engine)
-```
+*   **Design Tokens:** Built around a luxury glassmorphism grid layout. Implements `backdrop-filter: blur(12px)` on glass containers, `#0a0a0f` deep dark backgrounds, and active gold buttons.
+*   **Interactive Components:**
+    *   **Quick Question buttons:** Clicking buttons in the sidebar immediately feeds queries to the agent.
+    *   **Starter Chips:** Quick start options in the main chat box on welcome load.
+    *   **Typing Bubble:** Fades in while query retrieval is executing to let users know the system is generating.
+    *   **Metadata Badges:** Displays response metrics (confidence bar, source tags, and suggestion chips) at the base of answers.
+    *   **Clear Chat utility:** Resets local and session storage.
 
 ---
 
-## API Reference
+## 🔌 REST API Reference
 
-### `TextChunker`
+The Flask application exposes the following endpoints:
 
-| Method | Signature | Description |
-|--------|-----------|-------------|
-| `__init__` | `(chunk_tokens=450, overlap_tokens=80)` | Initialize chunker |
-| `chunk_text` | `(text: str) → List[str]` | Split text into chunks |
-| `chunk_text_with_metadata` | `(text, source, file_type) → List[Dict]` | Chunk with metadata |
-| `read_file` | `(file_path: str) → str` | Read and decode file |
-| `process_data_files` | `(data_dir="backend/data") → List[Dict]` | Process all files |
+### 1. Chat Completion (`POST /api/chat`)
+Accepts query inputs and returns RAG pipeline responses.
+*   **Request JSON:**
+    ```json
+    {
+      "message": "What is the fee for the digital marketing course?"
+    }
+    ```
+*   **Response JSON:**
+    ```json
+    {
+      "answer": "The fee for the AI-integrated Digital Marketing course at HACA is Rs. 50,000 for the offline program...\n\n**Sources:** Fees, Courses",
+      "sources": ["fees.txt", "courses.md"],
+      "confidence": 0.85,
+      "follow_ups": [
+        "What is the duration of the digital marketing program?",
+        "Are there any scholarship schemes?",
+        "What does the digital marketing curriculum cover?"
+      ],
+      "is_valid": true,
+      "context_length": 1420
+    }
+    ```
+
+### 2. Service Health Check (`GET /api/health`)
+Returns backend operational status.
+*   **Response JSON:**
+    ```json
+    {
+      "status": "ok",
+      "documents_indexed": 47,
+      "llm_available": true,
+      "pipeline_ready": true
+    }
+    ```
+
+### 3. Pipeline Metrics (`GET /api/stats`)
+Lists statistics from ChromaDB and the pipeline configuration.
+*   **Response JSON:**
+    ```json
+    {
+      "documents_indexed": 47,
+      "data_directory": "C:\\path\\to\\backend\\data",
+      "pipeline": {
+        "llm_available": true,
+        "pipeline_components": ["QueryEngine", "PromptBuilder", "LLMProvider", "ResponseProcessor"]
+      },
+      "vector_store": {
+        "collection_name": "haca_documents",
+        "total_documents": 47,
+        "db_path": "C:\\path\\to\\haca_main.db",
+        "embedding_dimension": 384
+      }
+    }
+    ```
+
+### 4. Re-populate database (`POST /api/repopulate`)
+Clears existing database collections and re-indexes raw files.
+*   **Response JSON:**
+    ```json
+    {
+      "success": true,
+      "message": "Successfully indexed 47 chunks.",
+      "chunks_added": 47
+    }
+    ```
 
 ---
 
-### `ChromaVectorStore`
+## 🚀 Running the Application
 
-| Method | Signature | Description |
-|--------|-----------|-------------|
-| `__init__` | `(db_path, collection_name, embedding_model)` | Connect/create collection |
-| `add_chunks` | `(chunks: List[Dict]) → int` | Embed and store chunks |
-| `search` | `(query, k=5, score_threshold=None) → List[Dict]` | Semantic search |
-| `batch_search` | `(queries, k=5) → Dict` | Multi-query search |
-| `get_stats` | `() → Dict` | Collection statistics |
-| `clear_collection` | `() → None` | Delete all documents |
+### Option A: Complete Web App with Flask (Recommended)
+This runs the Flask REST API server and serves the premium Glassmorphic frontend at the root path.
+*   **On Windows:** Double-click `run.bat` in the `GPT/` folder.
+*   **Via Command Line:**
+    ```bash
+    python server.py
+    ```
+Open your browser and navigate to **`http://localhost:5000`**.
 
----
-
-### `QueryEngine`
-
-| Method | Signature | Description |
-|--------|-----------|-------------|
-| `preprocess_query` | `(query: str) → str` | Normalize query text |
-| `search_similar` | `(query, k=5) → List[Dict]` | Vector search |
-| `filter_results` | `(results, score_threshold=0.5) → List[Dict]` | Score filtering |
-| `deduplicate_results` | `(results, similarity_threshold=0.95) → List[Dict]` | Remove duplicates |
-| `build_context` | `(results, max_length=2000) → str` | Format context |
-| `process_query` | `(query, k=5, score_threshold=0.5) → str` | Full retrieval pipeline |
-| `get_stats` | `() → Dict` | Engine statistics |
+### Option B: Fallback Streamlit Interface
+Streamlit can be used to run a quick test on the RAG pipeline.
+*   **Command:**
+    ```bash
+    streamlit run app.py
+    ```
+Open your browser and navigate to **`http://localhost:8501`**.
 
 ---
 
-### `HACARagPipeline`
+## 🧪 Testing Suite
 
-| Method | Signature | Description |
-|--------|-----------|-------------|
-| `__init__` | `(vector_store, llm_provider, query_engine)` | Initialize pipeline |
-| `answer_question` | `(query, k=5, score_threshold=0.5) → Dict` | Full RAG answer |
-| `get_stats` | `() → Dict` | Pipeline statistics |
-
----
-
-## Running Tests
-
+To verify the integrity of the database connection, embedding generation, query retrieval, and LLM providers, run:
 ```bash
-cd "C:\Users\salam\OneDrive\Desktop\HACA\HACA GPT\GPT"
 python test_pipeline.py
 ```
-
-**Expected output:**
-
-```
-🚀 HACA GPT - Complete System Test
-==================================================
-🔍 Testing QueryEngine...
-✅ Query: What are the fees for courses?
-✅ Context length: ... characters
-
-🤖 Testing RAG Pipeline...
-📝 Query: What are the course fees?
-📄 Answer: Course fees vary by program...
-📊 Confidence: 0.70
-✅ Valid: True
-
-🔑 Testing OpenAI Provider...
-⚠️  OpenAI API key not found. Skipping OpenAI test.
-
-==================================================
-📊 Test Results Summary:
-Query Engine:    ✅ PASS
-RAG Pipeline:    ✅ PASS
-OpenAI Provider: ✅ PASS
-
-🎯 Overall: ✅ ALL TESTS PASSED
-🎉 Backend is ready for frontend integration!
-```
-
-> **Note:** OpenAI test auto-skips when no API key is set — this counts as PASS.
+This triggers an automated system test that processes queries through all modules. It outputs validation scores and checks key configurations before integration.
 
 ---
 
-## Troubleshooting
+## 🔧 Bug Fixes & System Optimizations
 
-### `ModuleNotFoundError`
+During recent updates, several critical issues were resolved:
 
-```bash
-pip install tiktoken chromadb sentence-transformers
-```
-
-### `get_sentence_embedding_dimension` FutureWarning
-
-This is a deprecation warning from a newer version of `sentence-transformers`. The code still works correctly. To suppress it:
-
-```python
-# In vector_store.py — rename the call:
-self.model.get_embedding_dimension()   # new name
-```
-
-### ChromaDB "Collection already exists" Error
-
-This was a bug in the original collection init logic. It is **fixed** — `get_or_create_collection()` is now used, which is idempotent and never raises on duplicate names.
-
-### Vector store is empty / No results found
-
-The `chroma.db` collection exists but has no documents. Run the data ingestion step:
-
-```python
-from chunker import TextChunker
-from vector_store import ChromaVectorStore
-
-vs = ChromaVectorStore()
-chunks = TextChunker().process_data_files('backend/data')
-vs.add_chunks(chunks)
-```
-
-### Unicode / Encoding errors on Windows
-
-All file reading uses `encoding='utf-8', errors='ignore'` — should not occur. If it does, verify the data file encoding.
-
-### OpenAI API Errors
-
-```bash
-# Check key is set
-echo $env:OPENAI_API_KEY
-
-# Install OpenAI package
-pip install openai
-```
+1.  **Windows Unicode Encoding Bugs:** Fixed file ingestion errors by replacing standard file readers with BOM-handling fallbacks (`errors='ignore'`) in `chunker.py`.
+2.  **Response Newline Collapsing:** Repaired a bug in the output formatter that collapsed paragraphs and list formatting into single lines. The system prompt cleaner now preserves double carriage returns (`\n\n`) for clean markdown layout structure.
+3.  **Collection Initialization Errors:** Refactored ChromaDB collection setup logic to use `get_or_create_collection()` to prevent startup crashes when reconnecting to an existing database.
+4.  **Redundant Data Seeding Safeguards:** Updated database seeding logic to verify document counts prior to populating. It will skip writing duplicate entries unless run with the `--force` flag.
+5.  **Multi-Query DB Locks:** Implemented `/api/repopulate` to reload text files directly from memory, preventing resource conflicts and lock issues on ChromaDB files.
 
 ---
 
-## Project Statistics
+## 📊 Project Metrics & Statistics
 
 | Metric | Value |
-|--------|-------|
-| Total data files | 10 |
-| Total chunks | 47 |
-| Avg chunk size | ~450 tokens |
-| Chunk overlap | 80 tokens |
-| Embedding model | all-MiniLM-L6-v2 |
-| Embedding dimensions | 384 |
-| Vector similarity metric | Cosine |
-| Vector database | ChromaDB (persistent) |
-| LLM providers supported | OpenAI GPT-3.5 / GPT-4, Mock |
-| Python version | 3.10+ |
+| :--- | :--- |
+| **Total Ingested Data Files** | 10 files |
+| **Total Database Chunks** | 47 chunks |
+| **Average Token Size** | ~450 tokens/chunk |
+| **Overlap Token Size** | 80 tokens |
+| **Embedding Dimension Count** | 384 dimensions |
+| **Persistent DB Instance** | ChromaDB (`haca_main.db`) |
+| **Active LLM Provider Model** | `gpt-4o-mini` (OpenAI API) |
+| **Fallback Provider Model** | `MockProvider` (Offline testing) |
+| **Supported OS Environment** | Windows, Linux, macOS |
 
 ---
 
-## Next Steps
-
-The backend RAG system is complete and all tests pass. Recommended next steps:
-
-1. **Web API** — Wrap `HACARagPipeline` in a FastAPI or Flask server
-2. **Chat Interface** — Build a React or Streamlit front-end
-3. **Data Ingestion Script** — One-click populate `chroma.db` from `backend/data`
-4. **Authentication** — Add user sessions and rate limiting
-5. **HuggingFace / Local LLM** — Add a `HuggingFaceProvider` class for offline use
-6. **Production Deployment** — Docker + cloud hosting (Railway, Render, GCP)
-
----
-
-**Last Updated:** May 13, 2026 | All 4 Phases Complete ✅
+**Last Updated:** June 18, 2026 | Production Build Complete ✅

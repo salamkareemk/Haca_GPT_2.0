@@ -329,7 +329,7 @@ The institution follows a practical mentor-led ecosystem where students learn di
 
 | Attribute  | Details                      |
 | ---------- | ---------------------------- |
-| Role       | AI & Backend Mentor          |
+| Role       | AI Mentor          |
 | Department | Tech School                  |
 | Experience | 6+ Years                     |
 | Expertise  | Python & AI Systems          |
@@ -355,10 +355,10 @@ The institution follows a practical mentor-led ecosystem where students learn di
 
 | Attribute  | Details                              |
 | ---------- | ------------------------------------ |
-| Role       | Data Analytics Mentor                |
+| Role       | Python Django Developer              |
 | Department | Tech School                          |
 | Experience | 5+ Years                             |
-| Expertise  | Data Science & Business Intelligence |
+| Expertise  | Python, MySQL, Django, AI Systems    |
 | Tools      | Python, Power BI, Excel              |
 
 ### Courses Handled

@@ -29,7 +29,7 @@
 |--------------|------|----------|--------------|
 | Advanced Data Analytics with AI | Online/Offline | 5 Months + 1 Month Project | Data analytics using Python, Power BI, and AI for business intelligence. |
 | Advanced Python Django with GenAI | Offline | 5 Months + 1 Month Project | Backend web development with real-world Django + AI applications. |
-| Data Science with GenAI | Online/Offline | 5 Months + 1 Month Project | Comprehensive Data Science training in machine learning and GenAI. |
+| Data Analytics with GenAI | Online/Offline | 5 Months + 1 Month Project | Comprehensive Data Analytics training in machine learning and GenAI. |
 | n8n for AI Agents & Automation | Online | 6 Weeks | Build workflows and automations using no-code tools like Slack and Google Sheets. |
 | Applied AI for Beginners | Online | 4 Weeks | Foundational AI and automation crash course using ChatGPT and practical tools. |
 | Dashboard Mastery in Power BI + Excel | Online | 6 Weeks | Develop analytical dashboards for business intelligence and reporting. |

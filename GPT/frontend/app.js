@@ -277,12 +277,12 @@ function clearChat() {
       <h1 class="welcome-title">Welcome to <span class="gradient-text">HACA GPT</span></h1>
       <p class="welcome-sub">Your intelligent AI guide to <strong>Haris &amp; Co Academy</strong>. Ask me anything — courses, fees, faculty, batches, placements, or admissions.</p>
       <div class="starter-chips">
-        <button class="chip" data-q="What are the top courses at HACA?">🎓 Top Courses</button>
-        <button class="chip" data-q="What is the fee for data science course?">💰 Data Science Fees</button>
-        <button class="chip" data-q="Tell me about HACA's placement record">🚀 Placement Record</button>
-        <button class="chip" data-q="What makes HACA different from other institutes?">⭐ Why HACA?</button>
-        <button class="chip" data-q="Are there any online courses available?">💻 Online Courses</button>
-        <button class="chip" data-q="When is the next batch starting?">📅 Next Batch</button>
+        <button class="chip" data-q="What are the top courses at HACA?">Top Courses</button>
+        <button class="chip" data-q="What is the fee for data analytics course?">Data Analytics Fees</button>
+        <button class="chip" data-q="Tell me about HACA's placement record">Placement Record</button>
+        <button class="chip" data-q="What makes HACA different from other institutes?">Why HACA?</button>
+        <button class="chip" data-q="Are there any online courses available?">Online Courses</button>
+        <button class="chip" data-q="When is the next batch starting?">Next Batch</button>
       </div>
     </div>`;
   messagesArea.querySelectorAll('.chip').forEach(chip => {

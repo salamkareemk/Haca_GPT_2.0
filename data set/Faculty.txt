@@ -358,7 +358,7 @@ The institution follows a practical mentor-led ecosystem where students learn di
 | Role       | Data Analytics Mentor                |
 | Department | Tech School                          |
 | Experience | 5+ Years                             |
-| Expertise  | Data Science & Business Intelligence |
+| Expertise  | Data Analytics & Business Intelligence |
 | Tools      | Python, Power BI, Excel              |
 
 ### Courses Handled
